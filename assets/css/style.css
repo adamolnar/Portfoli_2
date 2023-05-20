@@ -10,6 +10,7 @@ body {
     background-color: black;
     font-family: 'Russo One', sans-serif;
     color: white;
+    overflow: hidden;
   }
   
   .star {
@@ -20,88 +21,80 @@ body {
   }
   
   /* Set the animation, color, size and hide the text */
-  .intro {
+  #intro1 {
       position: absolute;
       top: 30%;
       left: 35%;
-      z-index: 1;
-      animation: intro 6s ease-out 1s;
-
-      
+      z-index: 99;
+      animation: intro 3s ease-out 1s; 
       color: rgb(75, 213, 238);
       font-weight: 400;
       font-size: 2rem;
       opacity: 0;
   }
   
-  @keyframes intro {
-      0% {
-          opacity: 0;
-      }
-      20% {
-          opacity: 1;
-      }
-      90% {
-          opacity: 1;
-      }
-      100% {
-          opacity: 0;
-      }
-  }
-    
-    #intro1 {
-        animation: intro 6s ease-out 1s;
+  #intro2 {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 99;
+    animation: intro 3s ease-out 4s; 
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 2rem;
+    opacity: 0;
+}
+
+#intro3 {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 99;
+    animation: intro 3s ease-out 7s; 
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 2rem;
+    opacity: 0;
+}
+
+#intro4 {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 99;
+    animation: intro 3s ease-out 10s; 
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 2rem;
+    opacity: 0;
+}   
+
+#intro5 {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 99;
+    animation: intro 3s ease-out 13s; 
+    color: rgb(75, 213, 238);
+    font-weight: 400;
+    font-size: 2rem;
+    opacity: 0;
+}   
+
+@keyframes intro  {
+    0% {
+        opacity: 0;
     }
-
-    #intro2 {
-        animation: intro 6s ease-out 7s;
+    20% {
+        opacity: 1;
     }
-
-    #intro3 {
-        animation: intro 6s ease-out 13s;
+    90% {
+        opacity: 1;
     }
-
-    #intro4 {
-        animation: intro 6s ease-out 19s;
+    100% {
+        opacity: 0;
     }
-
-
-
-
- 
-  
-  /* Set the animation & hide the logo */
-  .logo {    
-      position: absolute;
-      top: 20%;
-      left: 45%;
-      z-index: 1;
-      margin: auto;
-      animation:  ease-out 25s;
-      opacity: 0;
-  }
-  
-  .logo svg {
-      width: inherit;
-  }
-  
-  /* Scale the logo down and maintain it centered */
-  @keyframes logo {
-      0% {
-          width: 18em;        
-          transform: scale(2.75);
-          opacity: 1;
-      }
-      50% {
-          opacity: 1;
-          width: 18em;      
-      }
-      100% {
-          opacity: 0;
-          transform: scale(0.1);
-          width: 18em;
-      }
-  }
+}
   
   p {
     color: #e6c54d;
@@ -120,7 +113,7 @@ body {
     width: 80%;
     margin: 0 10%;
     bottom: 0;
-    background-color: red;
+    z-index: 1;
     
 
   }
@@ -136,7 +129,7 @@ body {
   
   /* Set the scrolling animation and position it */
   #content {
-    animation: scroll 10s linear 16s;
+    animation: scroll 50s linear 14s ;
     position: absolute;
     top: 100%;
   }
@@ -153,6 +146,10 @@ body {
           top: -170%;
       }
   }
+   
+  #rules {
+    text-align: center;
+  }
 
   /* Set the styling for the START button and it container */
 
@@ -166,7 +163,16 @@ body {
     display: inline-block;
     border-radius: 2rem;
     text-align: center;
+    animation: clickit 40s
 }
+
+  /* Add animation to start game button*/
+   @keyframes clickit {
+    0% {opacity: 0}
+    80% {opacity: 0}
+    100% {opacity: 1}
+}
+
 
   .button {
     width: 100%;
@@ -190,6 +196,8 @@ body {
     color: white;
 }
 
+
+  
 
 /* Add media queries to the start button */
 @media screen and (max-width: 670px) {
