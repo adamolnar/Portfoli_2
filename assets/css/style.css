@@ -26,6 +26,8 @@ body {
       left: 35%;
       z-index: 1;
       animation: intro 6s ease-out 1s;
+
+      
       color: rgb(75, 213, 238);
       font-weight: 400;
       font-size: 2rem;
@@ -46,6 +48,27 @@ body {
           opacity: 0;
       }
   }
+    
+    #intro1 {
+        animation: intro 6s ease-out 1s;
+    }
+
+    #intro2 {
+        animation: intro 6s ease-out 7s;
+    }
+
+    #intro3 {
+        animation: intro 6s ease-out 13s;
+    }
+
+    #intro4 {
+        animation: intro 6s ease-out 19s;
+    }
+
+
+
+
+ 
   
   /* Set the animation & hide the logo */
   .logo {    
@@ -184,3 +207,4 @@ body {
          font-size: 20px;
     }
   }
+
