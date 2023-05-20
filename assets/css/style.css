@@ -1,33 +1,15 @@
-/* --------- Global style */
+/* Global style */
 
-/*body {
-    font-family: "RussoOne", sans-serif;
-    color: #445361;
-    text-align: center;
-    background-image: url("../images/galaxy\ background.webp");
-}
-
-/* --------- Heading */
-
-/*.heading {
-    text-align: center;
-    font-size: 2.5rem;
-    color:#fdcf52;
-}
-
-.logo {
-    height: 40px;
-    padding-right: 5px;
-}
-
-/* --------- Game layout */
 html {
+    font-family: 'Russo One', sans-serif;
     font-size: calc(15px + 0.390625vw);
 }
 
 body {
     margin: 0;
     background-color: black;
+    font-family: 'Russo One', sans-serif;
+    color: white;
   }
   
   .star {
@@ -104,19 +86,20 @@ body {
   
   /* Set the font, lean the board, position it */
   #board {
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    transform: perspective(300px) rotateX(25deg);
+    transform: perspective(15rem) rotateX(20deg);
     transform-origin: 50% 100%;
     text-align: justify;
     position: absolute;
-    margin-left: -9em;
     font-weight: bold;
     overflow: hidden;
     font-size: 1.8rem;
     height: 50em;
-    width: 18em;
+    width: 80%;
+    margin: 0 10%;
     bottom: 0;
-    left: 50%;
+    background-color: red;
+    
+
   }
   
   #board:after {    
@@ -148,25 +131,56 @@ body {
       }
   }
 
-  /* Set the styling for the START button */
+  /* Set the styling for the START button and it container */
 
-  .button {
-    border: none;
-    color: white;
-    padding: 15px 60px;
+  #bt {
+    width: 20%;
+    margin: 0 40%;
+    padding: 15px;
+    bottom: 2%;
+    background-color: #e6c54d;
+    position: absolute;
+    display: inline-block;
     border-radius: 2rem;
     text-align: center;
+}
+
+  .button {
+    width: 100%;
+    border: none;
     text-decoration: none;
-    display: inline-block;
-    font-size: 1.2rem;
-    margin: 4px 2px;
     cursor: pointer;
-    background-color: #e6c54d;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-size: 1.8rem;
+    background-color: #e6c54d;
+    border-radius: 2rem;
+
   }
 
-  /* Add styling to game.html page */
-  .game {
-    background-color: aqua;
+
+  /* Add stylink for the button link */
+
+  a {
+    text-decoration: none;
+    font-family: 'Russo One', sans-serif;  
+    color: white;
+}
+
+
+/* Add media queries to the start button */
+@media screen and (max-width: 670px) {
+    #bt {
+        width: 40%;
+        margin: 0 30%;
+        padding: 5px;
+        font-size: 15px;
+
+    }
+  }
+
+  @media screen and (max-width: 300px) {
+    a {
+         font-size: 20px;
+    }
   }
