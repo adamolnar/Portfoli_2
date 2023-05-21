@@ -26,7 +26,7 @@ body {
       top: 30%;
       left: 35%;
       z-index: 99;
-      animation: intro 3s ease-out 1s; 
+      animation: intro 5s ease-out 1s; 
       color: rgb(75, 213, 238);
       font-weight: 400;
       font-size: 2rem;
@@ -38,7 +38,7 @@ body {
     top: 30%;
     left: 35%;
     z-index: 99;
-    animation: intro 3s ease-out 4s; 
+    animation: intro 5s ease-out 7s; 
     color: rgb(75, 213, 238);
     font-weight: 400;
     font-size: 2rem;
@@ -50,7 +50,7 @@ body {
     top: 30%;
     left: 35%;
     z-index: 99;
-    animation: intro 3s ease-out 7s; 
+    animation: intro 5s ease-out 13s; 
     color: rgb(75, 213, 238);
     font-weight: 400;
     font-size: 2rem;
@@ -62,7 +62,7 @@ body {
     top: 30%;
     left: 35%;
     z-index: 99;
-    animation: intro 3s ease-out 10s; 
+    animation: intro 5s ease-out 19s; 
     color: rgb(75, 213, 238);
     font-weight: 400;
     font-size: 2rem;
@@ -74,7 +74,7 @@ body {
     top: 30%;
     left: 35%;
     z-index: 99;
-    animation: intro 3s ease-out 13s; 
+    animation: intro 5s ease-out 25s; 
     color: rgb(75, 213, 238);
     font-weight: 400;
     font-size: 2rem;
@@ -129,9 +129,10 @@ body {
   
   /* Set the scrolling animation and position it */
   #content {
-    animation: scroll 50s linear 14s ;
+    animation: scroll 110s linear 28s ;
     position: absolute;
     top: 100%;
+    z-index: 2;
   }
   
   #title, #subtitle {
@@ -159,11 +160,11 @@ body {
     padding: 15px;
     bottom: 2%;
     background-color: #e6c54d;
-    position: absolute;
+    position:absolute;
     display: inline-block;
     border-radius: 2rem;
     text-align: center;
-    animation: clickit 40s
+    animation: clickit 80s;
 }
 
   /* Add animation to start game button*/
@@ -190,7 +191,9 @@ body {
 
   /* Add stylink for the button link */
 
-  a {
+.button  a {
+    position: relative;
+    z-index: 3;
     text-decoration: none;
     font-family: 'Russo One', sans-serif;  
     color: white;
@@ -211,8 +214,17 @@ body {
   }
 
   @media screen and (max-width: 300px) {
-    a {
+    .button a {
          font-size: 20px;
     }
   }
 
+/* Add fast forward glyphicon to the top of the page */
+
+.glyphicon {
+    position: absolute;
+    z-index: 4;
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 150%;
+}
