@@ -38,6 +38,12 @@
         <!--Game area -->
         <div class="game-area">
             <div class="controls-area">
+                <h2>Computer Choice: <span id="computer-choice"></span></h2>
+                <h2>Your Choice: <span id="user-choice"></span></h2>
+                <h2>Result: <span id="result"></span></h2>
+
+
+
                 <button id="rock" class="btn btn--big btn--rock">
                     <img src="./images/rock.jpg " alt="rock" style="font-size: 25%;">
                 </button>
@@ -54,19 +60,12 @@
                     <img src="./images/spock.jpg" alt="spock">
                 </button>
             </div>
-            <div class="question-area">
-                <span id="operand1">0</span>
-                <span id="operator">x</span>
-                <span id="operand2">0</span>
-                <span>=</span>
-                <p class="answer-message">Enter Answer:</p>
-                <input id="answer-box" type="number">
-            </div>
-            <button data-type="submit" class="btn btn--gray">Submit Answer</button>
+            
+            
         </div>
         <div class="score-area">
-            <p class="scores">Correct Answers <span id="score">0</span></p>
-            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+            <p class="scores"> You won!<span id="score">0</span></p>
+            <p class="scores">Sorry...You lost! <span id="incorrect">0</span></p>
         </div>
         
         

@@ -72,7 +72,7 @@ html, body {
     position: absolute;
     top: 30%;
     left: 35%;
-    z-index: 99;
+    z-index: 9;
     animation: intro 5s ease-out 25s; 
     color: rgb(75, 213, 238);
     font-weight: 400;

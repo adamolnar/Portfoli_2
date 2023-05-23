@@ -54,6 +54,7 @@ html, body{
     transform-style: preserve-3d;
     animation: move 10s ;
     animation-fill-mode: forwards;
+    z-index: 2;
     
   }
   
@@ -69,6 +70,7 @@ html, body{
     opacity: 0;
     animation: fade 6s ;
     animation-delay: 2s;
+    z-index: 3;
   }
   
   .wrap:nth-child(2) .wall {
@@ -129,8 +131,26 @@ html, body{
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+    position: absolute;
+    animation: intro 11s; 
+    z-index: 1;
 
   }
+
+  @keyframes intro  {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
   
   
   
