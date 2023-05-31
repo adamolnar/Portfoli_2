@@ -20,4 +20,11 @@ function getRandomPosition() {
     return [randomX,randomY];
 }
 
-// 
+// Function to return a random number in range 1 to 5 for a computer choice.
+
+function getComputerChoice() {
+  return Math.floor((Math.random() * 5) + 1);
+}
+
+// A Variable to store user input
+let userChoiceID = '';

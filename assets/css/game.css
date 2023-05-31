@@ -159,24 +159,37 @@ button {
   border-color: sienna;
 }
 
+button:hover {
+  border-color: red;
+}
+
 .btn-rock {
   background-image: url('/assets/images/rock.jpg');
+  border: rgb(143, 122, 122) 4px solid;
 }
 
 .btn-paper {
   background-image: url('/assets/images/paper.jpg');
+  border: blue 4px solid;
+
 }
 
 .btn-scissors {
   background-image: url('/assets/images/scissors.jpg');
+  border: yellow 4px solid;
+
 }
 
 .btn-lizard {
   background-image: url('/assets/images/lizard.jpg');
+  border: green 4px solid;
+
 }
 
 .btn-spock {
   background-image: url('/assets/images/spock.jpg');
+  border: rgb(135, 163, 235) 4px solid;
+
 }
   
   
