@@ -123,7 +123,7 @@ html, body{
 
   /*----------game layout--------------*/
 
-  .game-area {
+  .game_area {
     background-color: rgb(75, 213, 238);
     box-sizing: border-box;
     width: 85%;
@@ -198,7 +198,7 @@ button:hover {
   
   
 
-/*------Modal-----*/
+/*------Modal-----
 
 
 .rules-btn {
@@ -263,7 +263,7 @@ button:hover {
 .modal.content {
   text-align: center;
 }
-
+*/
 
 /* The Modal (background) */
 .modal {

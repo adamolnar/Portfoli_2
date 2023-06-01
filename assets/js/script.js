@@ -27,7 +27,110 @@ function getComputerChoice() {
 }
 
 // A Variable to store user input
-let userChoiceID = '';
+let userChoice = '';
+let computerChoice = '';
+
+// Function to compare user and computer choices and siplay text
+
+function compare(computerChoice) {
+  if (userChoice === computerChoice) {
+    return 'You have a tie! Go again!'  
+  } else if (userChoice === 'rock') {
+    if (computerChoice === 'paper') {
+      return 'Paper covers rock. You lose!'
+    }
+  } else if (userChoice === 'paper') {
+    if (computerChoice === 'rock') {
+      return 'Paper covers rock. You won!'
+    }
+  } else if (userChoice === 'scissors') {
+    if (computerCHoice === 'rock') {
+      return 'Rock crushes scissors! You lose'
+    }
+  } else if (userChoice === 'rock') {
+    if (computerCHoice === 'scissors') {
+      return 'Rock crushes scissors! You won'
+    }
+  } else if (userChoice === 'paper') {
+    if (computerChoice === 'scissors') {
+      return 'Scissors cut paper. You lose!'
+    }
+  } else if (userChoice === 'scissors') {
+    if (computerChoice === 'paper') {
+      return 'Scissors cut paper. You won!'
+    }
+  } else if (userChoice === 'paper') {
+    if (computerChoice === 'lizard') {
+      return 'Lizard eats paper. You lose!'
+    }
+  } else if (userChoice === 'lizard') {
+    if (computerChoice === 'paper') {
+      return 'Lizard eats paper. You won!'
+    }
+  } else if (userChoice === 'lizard') {
+    if (computerChoice === 'scissors') {
+      return 'Scissors decapitate lizard. You lose!'
+    }
+  } else if (userChoice === 'scissors') {
+    if (computerChoice === 'lizard') {
+      return 'Scissors decapitate lizard. You won!'
+    }
+  } else if (userChoice === 'lizard') {
+    if (computerChoice === 'rock') {
+      return 'Rock crushes lizard. You lose!'
+    }
+  } else if (userChoice === 'rock') {
+    if (computerChoice === 'lizard') {
+      return 'Rock crushes lizard. You won!'
+    }
+  } else if (userChoice === 'rock') {
+    if (computerChoice === 'spock') {
+      return 'Spock vaporizes rock. You lose!'
+    }
+  } else if (userChoice === 'spock') {
+    if (computerChoice === 'rock') {
+      return 'Spock vaporizes rock. You won!'
+    }
+  } else if (userChoice === 'spock') {
+    if (computerChoice === 'paper') {
+      return 'Paper disproves Spock. You lose!'
+    }
+  } else if (userChoice === 'paper') {
+    if (computerChoice === 'spock') {
+      return  'Paper disproves Spock. You won!'
+    }
+  } else if (userChoice === 'scissors') {
+    if (computerChoice === 'spock') {
+      return 'Spock crushes scissors. You lose!'
+    }
+  } else if (userChoice === 'spock') {
+    if (computerChoice === 'scissors') {
+      return 'Spock crushes scissors. You won!'
+    }
+  } else if (userChoice === 'spock') {
+    if (computerChoice === 'lizard') {
+      return 'Lizard poisons Spock. You lose!'
+    }
+  } else if (userChoice === 'lizard') {
+    if (computerChoice === 'spock') {
+      return 'Lizard poisons Spock. You won!'
+    }
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
