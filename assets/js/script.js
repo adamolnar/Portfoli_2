@@ -24,15 +24,32 @@ function getRandomPosition() {
 
 function getComputerChoice() {
   return Math.floor((Math.random() * 5) + 1);
+
 }
 
 // A Variable to store user input
-let userChoice = '';
-let computerChoice = '';
+
+const computerChoiceDisplay = document.getElementById('computer-choice')
+const userChoiceDisplay = document.getElementById('user-choice')
+const resultDisplay = document.getElementById('result')
+const possibleChoice = document.querySelector('button')
+let userChoice
+let computerChoice
+let result
+
+
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+  userChoice = e.target.id
+  userChoiceDisplay.innerHTML = userChoice
+  generateComputerChoice()
+  getResult()
+}))
+
+
 
 // Function to compare user and computer choices and siplay text
 
-function compare(computerChoice) {
+function getResult() {
   if (userChoice === computerChoice) {
     return 'You have a tie! Go again!'  
   } else if (userChoice === 'rock') {
@@ -116,6 +133,7 @@ function compare(computerChoice) {
       return 'Lizard poisons Spock. You won!'
     }
   }
+  resultDisplay.innerHTML = result
 };
 
 
