@@ -20,19 +20,16 @@ function getRandomPosition() {
     return [randomX,randomY];
 }
 
-// Function to return a random number in range 1 to 5 for a computer choice.
 
-function getComputerChoice() {
-  return Math.floor((Math.random() * 5) + 1);
 
-}
 
-// A Variable to store user input
+// GAME
+// A Variable to store chosen input
 
 const computerChoiceDisplay = document.getElementById('computer-choice')
 const userChoiceDisplay = document.getElementById('user-choice')
 const resultDisplay = document.getElementById('result')
-const possibleChoice = document.querySelector('button')
+const possibleChoices = document.querySelector('button')
 let userChoice
 let computerChoice
 let result
@@ -44,6 +41,30 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
   generateComputerChoice()
   getResult()
 }))
+
+// Function to return a random number in range 1 to 5 for a computer choice.
+
+function generateComputerChoice() {
+  const randomNumber = Math.floor(Math.random() * 5) + 1 
+  
+  if (randomNumber === 1) {
+    computerChoice = 'rock'
+  }
+  if (randomNumber === 2) {
+    computerChoice = 'scissors'
+  }
+  if (randomNumber === 3) {
+    computerChoice = 'paper'
+  }
+  if (randomNumber === 4) {
+    computerChoice = 'lizard'
+  }
+  if (randomNumber === 5) {
+    computerChoice = 'spock'
+  }
+  computerChoiceDisplay.innerHTML = computerChoice
+}
+
 
 
 
@@ -141,32 +162,3 @@ function getResult() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
