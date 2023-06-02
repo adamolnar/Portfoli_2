@@ -21,21 +21,37 @@
 </head>
 <body>
 
-    <!--Game area -->
-    <div class="game-area">
-        <div class="controls-area">
-            <h2>Computer Choice: <span id="computer-choice"></span></h2>
-            <h2>Your Choice: <span id="user-choice"></span> </h2>
-                <button id="rock" class="choice">🪨</button>
-                <button id="paper" class="choice">📃</button>
-                <button id="scissors" class="choice">✂️</button>
-                <button id="lizard" class="choice">🦎</button>
-                <button id="spock" class="choice">🖖🏻</button>
-           
-            <h2>Result: <span id="result"></span></h2>        
-                
-                
-                           
+    <h4>Welcome to </h4>
+    <div id="game_name"><h1>Rock, Paper, Scissors, Lizard, Spock!</h1></div>
+
+     <!--Game area -->
+    <main>
+        <section class="game-container">
+            <p>Player</p>
+            <div class="choice-container" id="player-choice-container">
+                <p class="emoji">🪨</p>
+                <p class="emoji">📄</p>
+                <p class="emoji">✂️</p>
+                <p class="emoji">🦎</p>
+                <p class="emoji">🖖🏻</p>
+            </div>
+        </section>
+
+        <h3>VS</h3>
+
+        <section class="game-container">
+            <p>Computer</p>
+            <div class="choice-container">
+                <p class="choice" id="choice-shuffle"></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Game result -->
+    <h2 id="game-result-message"></h2>
+
+
+                    
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
