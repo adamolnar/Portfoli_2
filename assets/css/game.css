@@ -139,13 +139,14 @@ html, body{
 
 button {
   border-radius: 50%;
-  padding: 5%;
+  padding: 2%;
+  font-size: 200%;
   background-size: cover;
   border-color: sienna;
 }
 
 button:hover {
-  border-color: red;
+  background-color: rgba(147, 212, 119, 0.5);
 }
 
 .btn-rock {
@@ -180,6 +181,8 @@ button:hover {
 .rules-btn {
   display: block;
 }
+
+
   
   
 

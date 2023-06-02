@@ -24,15 +24,40 @@ function getRandomPosition() {
 
 
 // GAME
-// A Variable to store chosen input
 
-const computerChoiceDisplay = document.getElementById('computer-choice')
-const userChoiceDisplay = document.getElementById('user-choice')
-const resultDisplay = document.getElementById('result')
-const possibleChoices = document.querySelector('button')
-let userChoice
-let computerChoice
-let result
+// A variable to store chosen input
+var userChoice = "";
+var computerChoice = "";
+var result = "";
+
+var userChoiceDisplay = document.getElementById("user-choice");
+var computerChoiceDisplay = document.getElementById("computer-choice");
+var resultDisplay = document.getElementById("result");
+var possibleChoices = document.querySelector(".choice");
+
+
+
+userChoiceDisplay.addEventListener("click", handleUserChoice);
+
+function handleUserChoice(event) {
+  if (!event.target.classList.contains('choice')) return;
+
+  userChoice = event.target.textContent;
+  userChoiceDisplay.innerHTML = `<p class="choice">${userChoice}</p>`;
+}
+``
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
@@ -68,7 +93,7 @@ function generateComputerChoice() {
 
 
 
-// Function to compare user and computer choices and siplay text
+// Function to compare user and computer choices and display text
 
 function getResult() {
   if (userChoice === computerChoice) {
