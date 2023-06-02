@@ -25,7 +25,74 @@ function getRandomPosition() {
 
 // GAME
 
-// A variable to store chosen input
+
+
+var playerChoice = "";
+var computerChoice = "";
+
+var emojis = ["✂️ ", "📄", "🪨", "🦎", "🖖🏻"];
+var currentEmojiNumber = 0;
+
+var shuffleIntervalID = setInterval(shuffleEmojis, 150);
+
+var playerChoiceContainer = document.querySelector("#player-choice-container");
+var emojiShuffleElement = document.querySelector("#emoji-shuffle");
+
+playerChoiceContainer.addEventListener("click", handlePlayerChoice);
+
+function determineGameWinner() {
+    var gameResultMessageElement = document.querySelector("#game-result-message");
+    var gameResultMessage = "";
+
+    if (playerChoice === computerChoice) {
+        gameResultMessage = "It's a tie!";
+    } else if (playerChoice === "🪨" && computerChoice === "✂️ ") {
+        gameResultMessage = "Player wins!";
+    } else if (playerChoice === "📄" && computerChoice === "🪨") {
+        gameResultMessage = "Player wins!";
+    } else if (playerChoice === "✂️ " && computerChoice === "📄") {
+        gameResultMessage = "Player wins!";
+    }else if (playerChoice === "🦎" && computerChoice === "📄") {
+          gameResultMessage = "Player wins!";  
+    }else if (playerChoice === "✂️ " && computerChoice === "🦎") {
+          gameResultMessage = "Player wins!";  
+    }else if (playerChoice === "🪨" && computerChoice === "🦎") {
+          gameResultMessage = "Player wins!"; 
+    }else if (playerChoice === "🖖🏻" && computerChoice === "🪨") {
+          gameResultMessage = "Player wins!"; 
+    }else if (playerChoice === "📄" && computerChoice === "🖖🏻") {
+          gameResultMessage = "Player wins!"; 
+    }else if (playerChoice === "🖖🏻" && computerChoice === "✂️ ") {
+          gameResultMessage = "Player wins!"; 
+    }else if (playerChoice === "🦎" && computerChoice === "🖖🏻") {
+          gameResultMessage = "Player wins!";        
+    } else {
+        gameResultMessage = "Computer wins!";
+    }
+
+    gameResultMessageElement.textContent = gameResultMessage + " Refresh to play again!";
+}
+
+function handlePlayerChoice(event) {
+    if (!event.target.classList.contains("emoji")) return;
+    playerChoice = event.target.textContent;
+    playerChoiceContainer.innerHTML = `<p class="emoji">${playerChoice}</p>`;
+    clearInterval(shuffleIntervalID);
+    determineGameWinner();
+}
+
+function shuffleEmojis() {
+    computerChoice = emojis[currentEmojiNumber];
+    emojiShuffleElement.textContent = computerChoice;
+
+    if (currentEmojiNumber < emojis.length - 1) {
+        currentEmojiNumber++;
+    } else {
+        currentEmojiNumber = 0;
+    }
+}
+
+/* A variable to store chosen input
 var userChoice = "";
 var computerChoice = "";
 var result = "";
@@ -65,7 +132,7 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click
   userChoiceDisplay.innerHTML = userChoice
   generateComputerChoice()
   getResult()
-}))
+}))*/
 
 // Function to return a random number in range 1 to 5 for a computer choice.
 
@@ -73,19 +140,19 @@ function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 5) + 1 
   
   if (randomNumber === 1) {
-    computerChoice = 'rock'
+    computerChoice = "🪨"
   }
   if (randomNumber === 2) {
-    computerChoice = 'scissors'
+    computerChoice = "✂️ "
   }
   if (randomNumber === 3) {
-    computerChoice = 'paper'
+    computerChoice =  "📄"
   }
   if (randomNumber === 4) {
-    computerChoice = 'lizard'
+    computerChoice = "🦎"
   }
   if (randomNumber === 5) {
-    computerChoice = 'spock'
+    computerChoice = "🖖🏻"
   }
   computerChoiceDisplay.innerHTML = computerChoice
 }
@@ -180,7 +247,7 @@ function getResult() {
     }
   }
   resultDisplay.innerHTML = result
-};
+}; */
 
 
 
