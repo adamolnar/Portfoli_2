@@ -200,19 +200,17 @@ h3{
 }
 
 
-/* Add styling to the button to refresh the game*/
-.newGame {
-  width: 20%;
-  height: fit-content;
-  padding: 10px;
-  background-color: #e6c54d;
-  margin: 0 auto;
-  font-size: 16px;
-  border-radius: 20px; 
-  bottom: 2%;
-  left: 40%;
-  position: absolute;
-}
+/* Reload button style */
+.reload {
+  display: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: green;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  }
 
 /* Add styling to the button to show game result*/
 #game-result-message {

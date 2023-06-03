@@ -48,14 +48,13 @@ userChoiceContainer.addEventListener("click", handlePlayerChoice);
 
 function handlePlayerChoice(event) {
   if (!event.target.classList.contains("emoji")) return;
- userChoice = event.target.textContent;
- userChoiceContainer.innerHTML = `<p class="emoji">${userChoice}</p>`;
+  userChoice = event.target.textContent;
+  userChoiceContainer.innerHTML = `<p class="emoji">${userChoice}</p>`;
   clearInterval(shuffleIntervalID);
   playGame();
 }
 
 // Function to return a random emoji from the dictiopnary.
-
 function shuffleEmojis() {
   computerChoice = emojis[currentEmojiNumber];
   emojiShuffleElement.textContent = computerChoice;
@@ -67,10 +66,24 @@ function shuffleEmojis() {
   }
 }
 
+// Function to start playing game
+playGame.forEach(option => {
+      option.addEventListener('click',function(){
+
+          let movesLeft = document.querySelector('.movesleft');
+          moves++;
+          movesLeft.innerText = `Moves Left: ${10-moves}`;
+          
+          // Calling gameOver function after 10 moves
+          if(moves == 10){
+              gameOver(playerOptions,movesLeft);
+          }
+      })
+  })
+  
 
 
 // Function to compare user and computer choices and determin game winner.
-
 function playGame() {
     let gameResultMessageElement = document.querySelector("#game-result-message");
     let gameResultMessage = "";
@@ -79,6 +92,10 @@ function playGame() {
 
     if (userChoice === computerChoice) {
         gameResultMessage = "It's a tie!";
+        playerScore +=0;
+        playerScoreBoard.textContent = playerScore;
+        computerScore +=0;
+        computerScoreBoard.textContent = computerScore;
        
     } else if (userChoice === "🪨" && computerChoice === "✂️") {
         gameResultMessage = 'Rock crushes scissors. You win !';
@@ -176,11 +193,49 @@ function playGame() {
 
 
 
-// Button to  play again
-document.querySelector('.newGame').addEventListener('click', function(){
-  window.location.reload();
-  return false;
-});
+// Function to run when game is over
+const gameOver = (playerOptions,movesLeft) => {
+    
+      const chooseMove = document.querySelector('.move');
+      const result = document.querySelector('.result');
+      const reloadBtn = document.querySelector('.reload');
+  
+      playerOptions.forEach(option => {
+          option.style.display = 'none';
+      })
+  
+   
+      chooseMove.innerText = 'Game Over!!'
+      movesLeft.style.display = 'none';
+  
+      if(playerScore > computerScore){
+          result.style.fontSize = '2rem';
+          result.innerText = 'You Won The Game'
+          result.style.color = '#308D46';
+      }
+      else if(playerScore < computerScore){
+          result.style.fontSize = '2rem';
+          result.innerText = 'You Lost The Game';
+          result.style.color = 'red';
+      }
+      else{
+          result.style.fontSize = '2rem';
+          result.innerText = 'Tie';
+          result.style.color = 'grey'
+      }
+      reloadBtn.innerText = 'Restart';
+      reloadBtn.style.display = 'flex'
+      reloadBtn.addEventListener('click',() => {
+          window.location.reload();
+      })
+  }
+  
+  
+  // Calling playGame function inside game
+  playGame();
+  
+  // Calling the game function
+  game();
 
 
 
