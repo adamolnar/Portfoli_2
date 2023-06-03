@@ -74,9 +74,9 @@ function determineGameWinner() {
     if (userChoice === computerChoice) {
         gameResultMessage = "It's a tie!";
 
-    } else if (userChoice === "🪨" && computerChoice === "✂️ ") {
+    } else if (userChoice === "🪨" && computerChoice === "✂️") {
         gameResultMessage = 'Rock crushes scissors. You win !';
-    } else if (userChoice === "✂️" && computerChoice === "🪨 ") {
+    } else if (userChoice === "✂️" && computerChoice === "🪨") {
         gameResultMessage = 'Rock crushes scissors ! You lose';
     
     } else if (userChoice === "📄" && computerChoice === "🪨") {
@@ -84,9 +84,9 @@ function determineGameWinner() {
     } else if (userChoice === "🪨" && computerChoice === "📄") {
         gameResultMessage = 'Paper covers rock ! You lose';
 
-    } else if (userChoice === "✂️ " && computerChoice === "📄") {
+    } else if (userChoice === "✂️" && computerChoice === "📄") {
         gameResultMessage =  'Scissors cut paper. You win !';
-    } else if (userChoice === "📄" && computerChoice === "✂️ ") {
+    } else if (userChoice === "📄" && computerChoice === "✂️") {
         gameResultMessage =  'Scissors cut paper ! You lose';
 
     }else if (userChoice === "🦎" && computerChoice === "📄") {
@@ -94,9 +94,9 @@ function determineGameWinner() {
     }else if (userChoice === "📄" && computerChoice === "🦎") {
           gameResultMessage = 'Lizard eats paper ! You lose';  
 
-    }else if (userChoice === "✂️ " && computerChoice === "🦎") {
+    }else if (userChoice === "✂️" && computerChoice === "🦎") {
           gameResultMessage = 'Scissors decapitate lizard. You win !'; 
-    }else if (userChoice === "🦎" && computerChoice === "✂️ ") {
+    }else if (userChoice === "🦎" && computerChoice === "✂️") {
           gameResultMessage = 'Scissors decapitate lizard! You lose';   
 
     }else if (userChoice === "🪨" && computerChoice === "🦎") {
@@ -114,9 +114,9 @@ function determineGameWinner() {
     }else if (userChoice === "🖖🏻" && computerChoice === "📄") {
           gameResultMessage =  'Paper disproves Spock ! You lose';  
 
-    }else if (userChoice === "🖖🏻" && computerChoice === "✂️ ") {
+    }else if (userChoice === "🖖🏻" && computerChoice === "✂️") {
           gameResultMessage = 'Spock crushes scissors. You win !';
-    }else if (userChoice === "✂️ " && computerChoice === "🖖🏻") {
+    }else if (userChoice === "✂️" && computerChoice === "🖖🏻") {
           gameResultMessage = 'Spock crushes scissors ! You lose';  
 
     }else if (userChoice === "🦎" && computerChoice === "🖖🏻") {

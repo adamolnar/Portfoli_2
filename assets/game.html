@@ -21,6 +21,7 @@
 </head>
 <body>
 
+    <!--Title -->
     <h4>Welcome to </h4>
     <div id="game_name"><h1>Rock, Paper, Scissors, Lizard, Spock!</h1></div>
 
@@ -28,6 +29,8 @@
     <main>
         <div class="game-container">
             <p>Player</p>
+
+    <!--Options available to player to play game -->
             <div class="choice-container" id="player-choice-container">
                 <p class="emoji">🪨</p>
                 <p class="emoji">📄</p>
@@ -38,7 +41,8 @@
         </div>
 
         <h3>VS</h3>
-
+    
+    <!--Computer choice -->
         <div class="game-container">
             <p>Computer</p>
             <div class="choice-container">
@@ -47,10 +51,14 @@
         </div>
     </main>
 
+    <!--Result of game -->
     <div id="game-result-message"></div>
+
+    <!--Final result of game -->
+    <div class="result"></div>
     
 
-    
+    <!--Reload the game -->
     <div class="newGame" onclick="playAgainBtn()">PLAY AGAIN</div>
    
 
