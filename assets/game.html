@@ -21,15 +21,16 @@
 </head>
 <body>
 
+    <section>
     <!--Title -->
     <h4>Welcome to </h4>
     <div id="game_name"><h1>Rock, Paper, Scissors, Lizard, Spock!</h1></div>
 
+    
      <!--Game area -->
     <main>
         <div class="game-container">
             <p>Player</p>
-
     <!--Options available to player to play game -->
             <div class="choice-container" id="player-choice-container">
                 <p class="emoji">🪨</p>
@@ -56,10 +57,30 @@
 
     <!--Final result of game -->
     <div class="result"></div>
-    
 
+    <!--Display Score of player and computer -->
+    <div class="score">
+        <div class="playerScore">
+            <h2>Player</h2>
+            <p class="p-count count">0</p>
+
+        </div>
+        <div class="computerScore">
+            <h2>Computer</h2>
+            <p class="c-count count">0</p>
+
+        </div>
+    </div>
+
+
+    <!--Number of moves left before game ends -->
+    <div class="movesleft">Moves Left: 10 </div>
+
+    
     <!--Reload the game -->
     <div class="newGame" onclick="playAgainBtn()">PLAY AGAIN</div>
+
+    </section> 
    
 
 
