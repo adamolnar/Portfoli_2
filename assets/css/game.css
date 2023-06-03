@@ -12,6 +12,8 @@ html, body{
   body{
     background: #000;
     text-align: center;
+    font-size: calc(15px + 0.390625vw);
+    font-family: 'Russo One', sans-serif;
   }
   
 
@@ -153,7 +155,6 @@ h2 {
     height: 48px;
     font-size: 36px;
     color: white;
-    font-family: 'Itim', cursive;
     color:  #e6c54d;
 
 }
@@ -163,7 +164,6 @@ main {
     justify-content: space-around;
     width: 100%;   
     margin: 2% auto;
-    font-family: 'Bungee', cursive;
     color: black;    
 }
 
@@ -201,28 +201,30 @@ h3{
     margin-top: 40px;
 }
 
-/* Injected by JavaScript */
 
-#error-message {
-    background-color: red;
-    color: yellow;
-    padding: 18px;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.2;
-    position: fixed;
-    z-index: 100;
-    border-radius: 8px;
+/* Add styling to the button to refresh the game*/
+.newGame {
+  width: 20%;
+  height: fit-content;
+  padding: 2%;
+  background-color: #e6c54d;
+  margin: 0 auto;
+  font-size: 30px;
+  border-radius: 20px; 
+  bottom: 2%;
+  left: 40%;
+  position: absolute;
 }
 
-#blackout {
-    width: 100vw;
-    height: 100vh;
-    background-color: #0000003d;
-    z-index: 99;
-    position: fixed;
-}
+/* Add styling to the button to show game result*/
+#game-result-message {
+  background-color: rgb(75, 213, 238);
+  width: 94%;
+  margin: 2% auto;
+  border-radius: 20px;
+  padding: 20px;
 
+}
   
   
 

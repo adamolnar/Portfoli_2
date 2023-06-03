@@ -77,22 +77,22 @@ function determineGameWinner() {
     } else if (userChoice === "🪨" && computerChoice === "✂️ ") {
         gameResultMessage = 'Rock crushes scissors. You win !';
     } else if (userChoice === "✂️" && computerChoice === "🪨 ") {
-        gameResultMessage = 'Rock crushes scissors! You lose';
+        gameResultMessage = 'Rock crushes scissors ! You lose';
     
     } else if (userChoice === "📄" && computerChoice === "🪨") {
         gameResultMessage = 'Paper covers rock. You win !';
     } else if (userChoice === "🪨" && computerChoice === "📄") {
-        gameResultMessage = 'Paper covers rock! You lose';
+        gameResultMessage = 'Paper covers rock ! You lose';
 
     } else if (userChoice === "✂️ " && computerChoice === "📄") {
         gameResultMessage =  'Scissors cut paper. You win !';
     } else if (userChoice === "📄" && computerChoice === "✂️ ") {
-        gameResultMessage =  'Scissors cut paper! You lose';
+        gameResultMessage =  'Scissors cut paper ! You lose';
 
     }else if (userChoice === "🦎" && computerChoice === "📄") {
           gameResultMessage = 'Lizard eats paper. You win !'; 
     }else if (userChoice === "📄" && computerChoice === "🦎") {
-          gameResultMessage = 'Lizard eats paper! You lose';  
+          gameResultMessage = 'Lizard eats paper ! You lose';  
 
     }else if (userChoice === "✂️ " && computerChoice === "🦎") {
           gameResultMessage = 'Scissors decapitate lizard. You win !'; 
@@ -102,31 +102,31 @@ function determineGameWinner() {
     }else if (userChoice === "🪨" && computerChoice === "🦎") {
           gameResultMessage = 'Rock crushes lizard. You win !';
     }else if (userChoice === "🦎" && computerChoice === "🪨") {
-          gameResultMessage = 'Rock crushes lizard! You lose';  
+          gameResultMessage = 'Rock crushes lizard ! You lose';  
 
     }else if (userChoice === "🖖🏻" && computerChoice === "🪨") {
           gameResultMessage ='Spock vaporizes rock. You win !';
     }else if (userChoice === "🪨" && computerChoice === "🖖🏻") {
-          gameResultMessage ='Spock vaporizes rock! You lose';  
+          gameResultMessage ='Spock vaporizes rock ! You lose';  
 
     }else if (userChoice === "📄" && computerChoice === "🖖🏻") {
           gameResultMessage =  'Paper disproves Spock. You win !';
     }else if (userChoice === "🖖🏻" && computerChoice === "📄") {
-          gameResultMessage =  'Paper disproves Spock! You lose';  
+          gameResultMessage =  'Paper disproves Spock ! You lose';  
 
     }else if (userChoice === "🖖🏻" && computerChoice === "✂️ ") {
           gameResultMessage = 'Spock crushes scissors. You win !';
     }else if (userChoice === "✂️ " && computerChoice === "🖖🏻") {
-          gameResultMessage = 'Spock crushes scissors! You lose';  
+          gameResultMessage = 'Spock crushes scissors ! You lose';  
 
     }else if (userChoice === "🦎" && computerChoice === "🖖🏻") {
           gameResultMessage = 'Lizard poisons Spock. You win !'; 
     }else if (userChoice === "🖖🏻" && computerChoice === "🦎") {
-          gameResultMessage = 'Lizard poisons Spock! You lose';     
+          gameResultMessage = 'Lizard poisons Spock ! You lose';     
 
     } 
 
-    gameResultMessageElement.textContent = gameResultMessage + " Refresh to play again!";
+    gameResultMessageElement.textContent = gameResultMessage;
 }
 
 
