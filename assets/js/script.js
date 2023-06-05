@@ -1,7 +1,9 @@
+//--------------------BACKGROUND STARS---------------------
+
 // Sets the number of stars  to display
 const numStars = 200;
 
-// For every star  to display
+// For every star to display
 for (let i = 0; i < numStars; i++) {
   let star = document.createElement("div");  
   star.className = "star";
@@ -19,6 +21,21 @@ function getRandomPosition() {
     let randomY = Math.floor(Math.random()*y);
     return [randomX,randomY];
 }
+
+
+
+let x = document.getElementById("myAudio");
+function playAudio() {
+   x.play()
+}
+
+document.addEventListener('keydown', function(e) {
+      if (e.keyCode == 13) {
+        document.getElementById('audio').play();
+      }
+    });
+
+//---------------------MODAL BOX-------------------------
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -48,9 +65,9 @@ window.onclick = function(event) {
 
 
 
-// GAME
+// ----------------------GAME----------------------
 
-// Counting score function
+// Counting score 
 var playerScore = 0;
 var computerScore = 0; 
 
@@ -58,7 +75,7 @@ var computerScore = 0;
 
 let userChoice = "";
 let computerChoice = "";
-let result = ""
+let result = [userChoice, computerChoice]
 
 let emojis = ["✂️ ", "📄", "🪨", "🦎", "🖖🏻"];
 let currentEmojiNumber = 0;
@@ -70,16 +87,16 @@ let emojiShuffleElement = document.querySelector("#emoji-shuffle");
 
 userChoiceContainer.addEventListener("click", handlePlayerChoice);
 
-
+// Function to get player choice
 function handlePlayerChoice(event) {
   if (!event.target.classList.contains("emoji")) return;
   userChoice = event.target.textContent;
   userChoiceContainer.innerHTML = `<p class="emoji">${userChoice}</p>`;
   clearInterval(shuffleIntervalID);
-  playGame();
+ determineWinner();
 }
 
-// Function to return a random emoji from the dictiopnary.
+// Function to return a random emoji from the dictionary and  genenerate computer choice.
 function shuffleEmojis() {
   computerChoice = emojis[currentEmojiNumber];
   emojiShuffleElement.textContent = computerChoice;
@@ -109,7 +126,7 @@ playGame.forEach(option => {
 
 
 // Function to compare user and computer choices and determin game winner.
-function playGame() {
+function determineWinner() {
     let gameResultMessageElement = document.querySelector("#game-result-message");
     let gameResultMessage = "";
     let playerScoreBoard = document.querySelector('.p-count');
@@ -216,49 +233,7 @@ function playGame() {
     gameResultMessageElement.textContent = gameResultMessage;
 }
 
-
-
-// Function to run when game is over
-const gameOver = (playerOptions,movesLeft) => {
-    
-      const chooseMove = document.querySelector('.move');
-      const result = document.querySelector('.result');
-      const reloadBtn = document.querySelector('.reload');
-  
-      playerOptions.forEach(option => {
-          option.style.display = 'none';
-      })
-  
-   
-      chooseMove.innerText = 'Game Over!!'
-      movesLeft.style.display = 'none';
-  
-      if(playerScore > computerScore){
-          result.style.fontSize = '2rem';
-          result.innerText = 'You Won The Game'
-          result.style.color = '#308D46';
-      }
-      else if(playerScore < computerScore){
-          result.style.fontSize = '2rem';
-          result.innerText = 'You Lost The Game';
-          result.style.color = 'red';
-      }
-      else{
-          result.style.fontSize = '2rem';
-          result.innerText = 'Tie';
-          result.style.color = 'grey'
-      }
-      reloadBtn.innerText = 'Restart';
-      reloadBtn.style.display = 'flex'
-      reloadBtn.addEventListener('click',() => {
-          window.location.reload();
-      })
-  }
-  
-  
-  // Calling playGame function inside game
-  playGame();
-  
+ 
   // Calling the game function
   game();
 

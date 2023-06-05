@@ -23,9 +23,16 @@
 <body>
 
     <!--Add fast forward glyphicon to the top of the page -->
-    <a href="./assets/game.html">
-        <span class="glyphicon glyphicon-fast-forward"><i class="fa-solid fa-forward" style="color: #e6c54d;"></i></span>
-    </a>    
+    
+        <a href="./assets/game.html">
+             <span class="glyphicon glyphicon-fast-forward"><i class="fa-solid fa-forward" style="color: #e6c54d;"></i></span>
+        </a>
+    
+        <audio controls id="myAudio" controls style="display:none">
+            <source src="/assets/audio/Star Wars Main Theme (Full).mp3" type="audio/mp3">
+        </audio>
+        <button onclick="playAudio()" ><span><i class="fa-solid fa-volume" style="color: #e6c54d;"></i></span></button>
+
 
     <section>
        <p id="intro1">A long time ago, in a galaxy far,<br> far away.... </p> 
