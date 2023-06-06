@@ -311,7 +311,14 @@ p.p-count.count {
     padding: 10px;
     font-family: 'Russo One', sans-serif;
 }
-  
+
+.audio-section {
+  float: right;
+  height: fit-content;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
 
   
   

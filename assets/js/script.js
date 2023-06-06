@@ -24,16 +24,18 @@ function getRandomPosition() {
 
 
 
-let x = document.getElementById("myAudio");
+let playBtn = document.getElementById("playBtn");
 function playAudio() {
-   x.play()
+   let myAudio = getElementById('myAudio');
+   if (myAudio.paused) {
+   myAudio.play();
+} else {
+      myAudio.pause();
+}
 }
 
-document.addEventListener('keydown', function(e) {
-      if (e.keyCode == 13) {
-        document.getElementById('audio').play();
-      }
-    });
+playBtn.addEventListener('click', playAudio) 
+     
 
 //---------------------MODAL BOX-------------------------
 
@@ -242,7 +244,24 @@ function determineWinner() {
 
 
 
-
+  function playAudio(player)
+  {
+     document.getElementById(player).play();
+     document.getElementById("pausebutton_" + player).style.display = "";
+     document.getElementById("playbutton_" + player).style.display = "none";
+     document.getElementById("resetbutton_" + player).style.display = "";
+  }
+  function pauseAudio(player)
+  {
+     document.getElementById(player).pause();
+     document.getElementById("playbutton_" + player).style.display = "";
+     document.getElementById("pausebutton_" + player).style.display = "none";
+     document.getElementById("resetbutton_" + player).style.display = "none";
+  }
+  function resetAudio(player)
+  {
+     document.getElementById(player).currentTime = 0;
+  }
 
 
 
