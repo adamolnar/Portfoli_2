@@ -71,8 +71,8 @@ html, body{
     height: 100%;
     position: absolute;
     opacity: 0;
-    animation: fade 6s ;
-    animation-delay: 2s;
+    animation: fade 12s ;
+    animation-delay: 0s;
     z-index: 3;
   }
   
@@ -124,6 +124,70 @@ html, body{
     }
   }
 
+
+/*  ---------------countdown ----------------------*/
+
+/*Add styling to countdown element*/
+#count-down {
+  position:absolute;
+  z-index: 5;
+  left: -100px;
+  top: -180px;
+  color: rgb(75, 213, 238);
+  text-align: center;
+  min-height: 100vh;
+  counter-reset: my-count 5;
+  animation: countdown 5s linear;
+  animation-delay: 7s;
+  
+  &::after {
+    content: counter(my-count);
+    font-size: 15em;
+  }
+}
+/*Animation for countdwon from 5 */
+@keyframes countdown {
+  0% {
+    
+  }
+  20% {
+    counter-increment: my-count -1;
+  }
+  40% {
+    counter-increment: my-count -2;
+  }
+  60% {
+    counter-increment: my-count -3;
+  }
+  80% {
+    counter-increment: my-count -4;
+  }
+  100% {
+   
+  }
+ 
+}
+
+
+
+
+/* ----------hyper links to next or prevoiuse page*/
+
+i.fa-solid.fa-backward {
+  position: absolute;
+  z-index: 4;
+  margin-top: 2%;
+  margin-left: 1%;
+  font-size: 150%;
+}
+
+i.fa-solid.fa-forward {
+  position: absolute;
+  z-index: 4;
+  margin-top: 2%;
+  margin-left: 6%;
+  font-size: 150%;
+}
   /*----------game layout--------------*/
 
 h4{
@@ -303,24 +367,23 @@ p.p-count.count {
 
 /* Modal button */
 #myBtn {
-    float: left;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-right: 10px;
     background-color: #e6c54d;
     border-radius: 20px;
     padding: 10px;
     font-family: 'Russo One', sans-serif;
+    position: absolute;
+    right: 0;
 }
 
-.audio-section {
-  float: right;
-  height: fit-content;
-  margin-top: 30px;
-  margin-right: 20px;
+@media only screen and (max-width: 600px) {
+  body {
+   font-size: 0%;
+  }
 }
 
 
-  
   
   
   

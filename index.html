@@ -22,26 +22,28 @@
 
 <body>
 
-    <!--Add fast forward glyphicon to the top of the page -->
+    <!--Add fast forward glyphicon to the next  page -->
     
-        <a href="./assets/game.html">
-             <span class="glyphicon glyphicon-fast-forward"><i class="fa-solid fa-forward" style="color: #e6c54d;"><abbr title=""></abbr></i></span>
+        <a href="./assets/hyperjump.html">
+            <span class="glyphicon glyphicon-fast-forward"><i class="fa-solid fa-forward" style="color: #e6c54d;"><abbr title=""></abbr></i></span>
         </a>
     
 
-
+    <!--Add audio-->
     <div class="audio-section">
         <audio id="player">
             <source src="/assets/audio/audio.mp3" type="audio/mp3">
+            This HTML5 player is not supported by your browser
         </audio>
 
-        <i class="fa-solid fa-volume-high fa-2xl" style="color: #e6c54d;"  style="cursor: pointer" name="play" id="playbutton_player" onClick="playAudio('player')" onMouseover="playbutton_player.src='play-over.png'" onMouseout="playbutton_player.class='fa-solid fa-volume-high fa-2xl'"></i>        
-        <i class="fa-solid fa-volume-xmark fa-2xl" style="color: #e6c54d;" style="visibility: hidden; cursor: pointer" name="pause"  onClick="pauseAudio('player')" onMouseover="pausebutton_player.class='fa-solid fa-volume-xmark fa-2xl'" onMouseout="pausebutton_player.src='pause.png'" ></i>  
-        <i class="fa-solid fa-arrow-rotate-right fa-2xs" style="color: #de1b42;" style="visibility: hidden;; cursor: pointer"  name="reset" id="resetbutton_player" onClick="resetAudio('player')"></i> 
+        <span><i class="fa-solid fa-volume-high fa-l" style="color: #e6c54d;"  style="cursor: pointer" name="play" id="playbutton_player" onClick="playAudio('player')" onMouseover="playbutton_player.src='play-over.png'" onMouseout="playbutton_player.class='fa-solid fa-volume-high fa-2xl'"></i></span>        
+        <span id="x" style="display: none;"><i class="fa-solid fa-volume-xmark fa-l" style="color: #e6c54d;"  class="x-volume" name="pause"  onClick="pauseAudio('player')" onMouseover="pausebutton_player.class='fa-solid fa-volume-xmark fa-2xl'" onMouseout="pausebutton_player.src='pause.png'" ></i></span>  
+        
         
         <div>
-            <button onClick="document.getElementById('player').volume += 0.2">Volume up</button>
-            <button onClick="document.getElementById('player').volume -= 0.2">volume down</button>
+            <button onClick="document.getElementById('player').volume -= 0.2" class="controle-btn"><span><i class="fa-solid fa-volume-low"></i> <i class="fa-solid fa-minus fa-2xs"></i></span></button>
+            <button onClick="resetAudio('player')" name="reset" id="resetbutton_player"  class="controle-btn"><span><i class="fa-solid fa-arrow-rotate-right fa-sm" style="color: #de1b42;" ></i></span></button>
+            <button onClick="document.getElementById('player').volume += 0.2" class="controle-btn"><span><i class="fa-solid fa-volume-high"></i> <i class="fa-solid fa-plus fa-2xs"></i></span></button>
          </div>
     </div>   
 

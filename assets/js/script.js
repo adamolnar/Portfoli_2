@@ -22,21 +22,7 @@ function getRandomPosition() {
     return [randomX,randomY];
 }
 
-
-
-let playBtn = document.getElementById("playBtn");
-function playAudio() {
-   let myAudio = getElementById('myAudio');
-   if (myAudio.paused) {
-   myAudio.play();
-} else {
-      myAudio.pause();
-}
-}
-
-playBtn.addEventListener('click', playAudio) 
      
-
 //---------------------MODAL BOX-------------------------
 
 // Get the modal
@@ -64,6 +50,31 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+//----------------------------AUDIO--------------------------------------------
+
+// Function to click on icon to play audio
+function playAudio(player)
+{
+   document.getElementById(player).play();
+   document.getElementById("pausebutton_" + player).style.display = "";
+   document.getElementById("playbutton_" + player).style.display = "none";
+   document.getElementById("resetbutton_" + player).style.display = "none";
+}
+function pauseAudio(player)
+{
+   document.getElementById(player).pause();
+   document.getElementById("playbutton_" + player).style.display = "";
+   document.getElementById("pausebutton_" + player).style.display = "none";
+   document.getElementById("resetbutton_" + player).style.display = "none";
+}
+function resetAudio(player)
+{
+   document.getElementById(player).currentTime = 0;
+}
+
+// When the user clicks the button, show the volume down icon 
+
 
 
 
@@ -243,25 +254,6 @@ function determineWinner() {
 
 
 
-
-  function playAudio(player)
-  {
-     document.getElementById(player).play();
-     document.getElementById("pausebutton_" + player).style.display = "";
-     document.getElementById("playbutton_" + player).style.display = "none";
-     document.getElementById("resetbutton_" + player).style.display = "";
-  }
-  function pauseAudio(player)
-  {
-     document.getElementById(player).pause();
-     document.getElementById("playbutton_" + player).style.display = "";
-     document.getElementById("pausebutton_" + player).style.display = "none";
-     document.getElementById("resetbutton_" + player).style.display = "none";
-  }
-  function resetAudio(player)
-  {
-     document.getElementById(player).currentTime = 0;
-  }
 
 
 

@@ -229,8 +229,29 @@ html, body {
 }
 
 
+/* Audio icon and buttons styling*/
+.audio-section {
+  float: right;
+  height: fit-content;
+  margin-top: 30px;
+  margin-right: 20px;
+  text-align: center;
+  font-weight: 900;
+}
 
 
+.controle-btn {
+  background-color:rgb(75, 213, 238);
+  font-weight: 900;
+}
+
+i#playbutton_player {
+  margin-bottom: 10px;
+}
+
+i.fa-solid.fa-volume-xmark.fa-l {
+  margin-bottom: 10px;
+}
 
 
 
