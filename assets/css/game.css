@@ -129,7 +129,7 @@ html, body{
 
 /*Add styling to countdown element*/
 #count-down {
-  position:absolute;
+  position:relative;
   z-index: 5;
   left: -100px;
   top: -180px;
@@ -137,8 +137,10 @@ html, body{
   text-align: center;
   min-height: 100vh;
   counter-reset: my-count 5;
-  animation: countdown 5s linear;
-  animation-delay: 7s;
+  animation: counter 5s;
+  animation-delay: 2s;
+  display: block;
+  
   
   &::after {
     content: counter(my-count);
@@ -146,26 +148,49 @@ html, body{
   }
 }
 /*Animation for countdwon from 5 */
-@keyframes countdown {
+@keyframes counter {
   0% {
-    
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
   }
   20% {
     counter-increment: my-count -1;
+    opacity: 1;
   }
   40% {
     counter-increment: my-count -2;
+    opacity: 1;
   }
   60% {
     counter-increment: my-count -3;
+    opacity: 1;
   }
   80% {
     counter-increment: my-count -4;
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
   }
   100% {
-   
+    opacity: 0;
+    display: none;
   }
- 
+}
+
+@-webkit-keyframes counter {
+  0% {
+  opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
 

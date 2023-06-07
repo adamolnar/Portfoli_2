@@ -251,6 +251,14 @@ function determineWinner() {
   game();
 
 
+  // Countdown animation from hyperjump.html
+
+  var slideBox = document.getElementById('count-down');
+
+    setTimeout(function(){
+    slideBox.style.display = 'none';
+    }, 5000); 
+
 
 
 
