@@ -26,11 +26,34 @@ html, body{
     background-color: white;
   }
 
+/* Audio icon and buttons styling*/
+.audio-section {
+  height: fit-content;
+  margin-top: 30px;
+  margin-right: 20px;
+  text-align: center;
+  font-weight: 900;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+}
+
+
+.controle-btn {
+  background-color:rgb(75, 213, 238);
+  font-weight: 900;
+}
+
+i#playbutton_player {
+  margin-bottom: 10px;
+}
+
+i.fa-solid.fa-volume-xmark.fa-l {
+  margin-bottom: 10px;
+}
+
 
 /* Hyperspace animation and styling */
-
-
-
 .wall{
   background: url('/assets/images/space.jpg') ;
   background-size: cover;
@@ -204,6 +227,7 @@ i.fa-solid.fa-backward {
   margin-top: 2%;
   margin-left: 1%;
   font-size: 150%;
+  left: 0;
 }
 
 i.fa-solid.fa-forward {
@@ -215,11 +239,16 @@ i.fa-solid.fa-forward {
 }
   /*----------game layout--------------*/
 
-h4{
-    font-size: 25px;
+#welcome-to{
+    font-size: 30px;
     color: #e6c54d;  
     letter-spacing: 3px;
     text-transform: uppercase;
+    margin: 80px auto;
+    margin-bottom: 20px;
+    width: fit-content;
+
+
 }
 
 #game_name {
@@ -361,8 +390,9 @@ p.p-count.count {
   border: 1px solid #888;
   border-radius: 20px;
   width: 80%;
-
 }
+
+
 
 /* The Close Button */
 .close {
@@ -392,14 +422,12 @@ p.p-count.count {
 
 /* Modal button */
 #myBtn {
-    margin-top: 10px;
-    margin-right: 10px;
+  margin: 20px auto;
     background-color: #e6c54d;
     border-radius: 20px;
     padding: 10px;
     font-family: 'Russo One', sans-serif;
     position: absolute;
-    right: 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -407,6 +435,7 @@ p.p-count.count {
    font-size: 0%;
   }
 }
+
 
 
   

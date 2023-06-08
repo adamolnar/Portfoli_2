@@ -21,10 +21,28 @@
 </head>
 <body>
 
-     <!--Add go back glyphicon to the top of the page -->
-        <a href="/index.html">
+    <!--Add go back glyphicon to the top of the page -->
+        <a href="/assets/hyperjump.html">
             <span class="glyphicon glyphicon-backwards"><i class="fa-solid fa-backward" style="color: #e6c54d;"><abbr title=""></abbr></i></span>
         </a>
+
+     <!--Add audio-->
+     <div class="audio-section">
+        <audio id="player">
+            <source src="/assets/audio/audio.mp3" type="audio/mp3">
+            This HTML5 player is not supported by your browser
+        </audio>
+
+        <span><i class="fa-solid fa-volume-high fa-l" style="color: #e6c54d;"  style="cursor: pointer" name="play" id="playbutton_player" onClick="playAudio('player')" onMouseover="playbutton_player.src='play-over.png'" onMouseout="playbutton_player.class='fa-solid fa-volume-high fa-2xl'"></i></span>        
+        <span id="x" style="display: none;"><i class="fa-solid fa-volume-xmark fa-l" style="color: #e6c54d;"  class="x-volume" name="pause"  onClick="pauseAudio('player')" onMouseover="pausebutton_player.class='fa-solid fa-volume-xmark fa-2xl'" onMouseout="pausebutton_player.src='pause.png'" ></i></span>  
+        
+        
+        <div>
+            <button onClick="document.getElementById('player').volume -= 0.2" class="controle-btn"><span><i class="fa-solid fa-volume-low"></i> <i class="fa-solid fa-minus fa-2xs"></i></span></button>
+            <button onClick="resetAudio('player')" name="reset" id="resetbutton_player"  class="controle-btn"><span><i class="fa-solid fa-arrow-rotate-right fa-sm" style="color: #de1b42;" ></i></span></button>
+            <button onClick="document.getElementById('player').volume += 0.2" class="controle-btn"><span><i class="fa-solid fa-volume-high"></i> <i class="fa-solid fa-plus fa-2xs"></i></span></button>
+         </div>
+    </div>   
 
     <!-- Trigger/Open The Modal -->
     <button id="myBtn">Game Rules  📋</button>
@@ -50,7 +68,7 @@
 
     <section>
     <!--Title -->
-    <h4>Welcome to </h4>
+    <div id="welcome-to">Welcome to</div>
     <div id="game_name"><h1>Rock, Paper, Scissors, Lizard, Spock!</h1></div>
 
     
