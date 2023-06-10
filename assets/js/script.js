@@ -113,9 +113,17 @@ function handlePlayerChoice(event) {
       if (moves == 10) {
             gameOver();
       } else {
-            shuffleIntervalID = setInterval(shuffleEmojis, 150);
-            nextRoundBtn.addEventListener("click", handlePlayerChoice);
+            shuffleIntervalID;
+            nextRoundBtn;
       }
+}
+
+// Function to generate computer and user choice
+let nextRound = document.getElementById('next-round');
+nextRound.addEventListener('click', nextRoundBtn);
+
+function nextRoundBtn() {
+      shuffleIntervalID = setInterval(shuffleEmojis, 150);
 }
 
 // Function to return a random emoji from the dictionary and  genenerate computer choice.
@@ -129,15 +137,6 @@ function shuffleEmojis() {
       currentEmojiNumber = 0;
   }
 }
-
-//Function for user to do next round
-let nextRoundBtn = document.querySelector(".reload");
-nextRoundBtn.addEventListener('click', handlePlayerChoice)
-
-while (nextROundBtn <= 10) { 
-    
-}
-
 
 // Function to compare user and computer choices and determin game winner.
 function determineWinner() {
@@ -264,7 +263,13 @@ function gameOver() {
     shuffleIntervalID = setInterval(shuffleEmojis, 150);
 
 
+// Countdown animation from hyperjump.html
 
+var slideBox = document.getElementById('count-down');
+
+setTimeout(function(){
+slideBox.style.display = 'none';
+}, 5000); 
 
 
 

@@ -244,11 +244,8 @@ i.fa-solid.fa-forward {
     color: #e6c54d;  
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin: 80px auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
     width: fit-content;
-
-
 }
 
 #game_name {
@@ -436,7 +433,16 @@ p.p-count.count {
   }
 }
 
+.movesleft {
+  width: 180px;
+  margin: 0 auto;
+  color: rgb(75, 213, 238);
+  letter-spacing: 2px;
+}
 
+#moves-l {
+  width: 97%;
+}
 
   
   
