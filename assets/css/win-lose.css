@@ -17,6 +17,7 @@ html, body {
     width: 1px;
     height: 1px;
     background-color: white;
+    z-index: 1;
   }
 
 /* Game Over styling */
@@ -34,6 +35,56 @@ h1#_gover {
     position: absolute;
     top: 8%;
     right: 22%;
-    z-index: 10;
+    z-index: 3;
     color: #E44141;
   }
+
+
+
+  #you-won {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    z-index: 3;
+  }
+
+  /* Congratulations confetti from Codehim*/
+
+  .confetti{
+    height: 640px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    user-select: none;
+    position: absolute;
+    z-index: 2;
+ }
+
+ #you-won {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    z-index: 3;
+}
+
+
+/* Congratulations header styling and zoom in animation */
+  #congrats {
+  display: block;
+  color: #e6c54d;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20%;
+  font-size: xxx-large;
+  letter-spacing: 2px;
+
+  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+
+  }
+
+  .animate__animated.animate__zoomIn {
+    --animate-duration: 2s;
+  }
+
+  
