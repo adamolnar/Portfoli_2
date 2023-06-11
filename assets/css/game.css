@@ -140,7 +140,6 @@ p.p-count.count {
 }
 
 /* Moda styling */
-
 .modal {
   display: none; 
   position: fixed; 
@@ -201,17 +200,8 @@ p.p-count.count {
   right: 0;
 }
 
-/* Media queries for smaller screen responsivnes */
-@media only screen and (max-width: 600px) {
-body {
-  font-size: 0%;
-  }
-}
-
 /* Styling for the conteiner with number of moves left before game ends */
 .movesleft {
-  width: 180px;
-  margin: 0 auto;
   color: rgb(75, 213, 238);
   letter-spacing: 2px;
 }
@@ -228,6 +218,39 @@ button#next-round {
   font-size: inherit;
 }
 
+/* Media queries for smaller screen responsivnes */
+@media only screen and (max-width: 1000px) {
+.choice-container {gap: 0; height: 100px; padding: 10px;}
+}
+
+/* Media queries for smaller screen responsivnes */
+@media only screen and (max-width: 650px) {
+body {font-size: 15px;}
+#myBtn {margin: 5px 5px; padding: 0;}
+#welcome-to {font-size: 20px; letter-spacing: 0;}
+h1 {font-size: 150%; }
+.emoji {font-size: inherit; margin-top: 0;}
+.choice-container {display: block; }
+.game-container {font-size: 20px;}
+p {display: contents;}
+button#next-round {font-size: 20px; padding: 5px;}
+.score h2 {font-size: 20px;}
+h2 {height: 30px;}
+.score {margin-top: 10%;}
+h3 {font-size: 20px; padding: 10px;}
+#game-result-message {width: auto;}
+}
+
+/* Media queries for smaller screen responsivnes */
+@media only screen and (max-width: 350px) {
+  button#next-round {font-size: 16px; padding: 2px;}  
+  .score h2 {font-size: 15px;}
+  p {height: 200px;}
+  .choice-container {display: table-row-group;}
+  #welcome-to {margin: 40px auto;}
+  main {margin: 5% auto;}
+  .game-container {font-size: 16px; padding-top: 10px;}
+}
   
   
   

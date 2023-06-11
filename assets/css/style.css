@@ -163,6 +163,7 @@ p {
   border-radius: 2rem;
   text-align: center;
   animation: clickit 80s;
+  z-index: 10;
 }
 
 /* Add animation to start game button */
@@ -245,7 +246,12 @@ i.fa-solid.fa-volume-xmark.fa-l {
   margin-bottom: 10px;
 }
 
-
+/* Media queries for smaller screens*/
+@media screen and (max-width: 400px) {
+.audio-section {
+  margin-top: 10px;
+}
+}
 
 
 
