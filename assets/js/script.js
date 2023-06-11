@@ -264,6 +264,19 @@ function gameOver() {
 
 
 
+//------------------------GAME OVER---------------------------------
+
+// Function to dispaly Game Over 
+function myoutput() {
+      document.getElementById('_gover').innerHTML = "Game Over";
+      setTimeout(function () {
+        document.getElementById('_gover').innerHTML = "";
+      }, 500);
+    }
+  this.setInterval(myoutput,1000);
+
+
+
 
 
 
