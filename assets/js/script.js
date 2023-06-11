@@ -188,11 +188,11 @@ function determineWinner() {
           computerScore +=1; 
           computerScoreBoard.textContent = computerScore;
 
-    }else if (userChoice === "✂️" && computerChoice === "🦎") {
+    }else if (userChoice === "✂️ " && computerChoice === "🦎") {
           gameResultMessage = 'Scissors decapitate lizard. You win !'; 
           playerScore +=1;
           playerScoreBoard.textContent = playerScore;
-    }else if (userChoice === "🦎" && computerChoice === "✂️") {
+    }else if (userChoice === "🦎" && computerChoice === "✂️ ") {
           gameResultMessage = 'Scissors decapitate lizard! You lose'; 
           computerScore +=1; 
           computerScoreBoard.textContent = computerScore;
@@ -246,9 +246,6 @@ function determineWinner() {
     gameResultMessageElement.textContent = gameResultMessage;
 }
 
-
-
-
 // Function to end the game and determine final winner.
 function gameOver() {
       if (playerScore > computerScore) {
@@ -257,7 +254,6 @@ function gameOver() {
             window.location.href = "lose.html"; // Redirect browser to lose.html or add your own losing page or custom function
       }
 }
-
 
 // Function to shuffle emojis in the game and to show full emoji choice to the user
     shuffleIntervalID = setInterval(shuffleEmojis, 150);
@@ -276,13 +272,17 @@ function myoutput() {
   this.setInterval(myoutput,1000);
 
 
+// Function to play again game and redirect it to game.html
+
+function playAgain () {
+      window.location.href = "game.html";  // Redirect browser to game.html
+};      
 
 
 
+//----------------------- Congarulations confetti from Codehim-------------------------------------------
 
-// Congarulations confetti from Codehim
-
-//-----------Var Inits--------------
+//Var Inits
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;

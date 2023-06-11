@@ -9,67 +9,57 @@ html, body {
     font-size: calc(15px + 0.390625vw);
     color: white;
     overflow: hidden;
+  }
 
-  }
-  
-  .star {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background-color: white;
-    z-index: 1;
-  }
+/* Ser the stars with java script function*/
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+  z-index: 1;
+}
 
 /* Game Over styling */
 .container {
-    margin: 0 auto;
-    width: 760px;
-    height: 896px;
-    position: relative;
-    overflow: hidden;
+  margin: 0 auto;
+  width: 760px;
+  height: 896px;
+  position: relative;
+  overflow: hidden;
 }
 
-h1#_gover {
-    
-    font-size: 40px;
-    position: absolute;
-    top: 8%;
-    right: 22%;
-    z-index: 3;
-    color: #E44141;
-  }
-
-
-
-  #you-won {
-    color: white;
-    font-size: 25px;
-    position: absolute;
-    z-index: 3;
-  }
-
-  /* Congratulations confetti from Codehim*/
-
-  .confetti{
-    height: 640px;
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-    user-select: none;
-    position: absolute;
-    z-index: 2;
- }
-
- #you-won {
-    color: white;
-    font-size: 25px;
-    position: absolute;
-    z-index: 3;
+#_gover {
+  font-size: 40px;
+  position: absolute;
+  top: 8%;
+  right: 22%;
+  z-index: 3;
+  color: #E44141;
 }
 
+/* Congratulations confetti from Codehim*/
+.confetti{
+  height: 640px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  user-select: none;
+  position: absolute;
+  z-index: 2;
+}
+
+#you-won {
+  color: rgb(75, 213, 238);
+  font-size: 25px;
+  text-align: center;
+  position: inherit;
+  line-height: 40px;
+  margin-top: 50px;
+}
 
 /* Congratulations header styling and zoom in animation */
-  #congrats {
+#congrats {
   display: block;
   color: #e6c54d;
   text-align: center;
@@ -77,14 +67,43 @@ h1#_gover {
   margin-top: 20%;
   font-size: xxx-large;
   letter-spacing: 2px;
+  animation: zoomIn; 
+  animation-duration: 2s; 
+}
 
-  animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
+.animate__animated.animate__zoomIn {
+  --animate-duration: 2s;
+}
 
-  }
 
-  .animate__animated.animate__zoomIn {
-    --animate-duration: 2s;
-  }
-
+/* Play Again button*/
+button {
+  background-color: #e6c54d;
+  font-weight: 800;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: inherit;
+  position: absolute;
+  z-index: 10;
+  margin: 0 40%;
+  margin-top: 18%;
+  width: 20%;
+}
   
+/* Game Over styling */
+#game-over {
+  display: block;
+  color:rgb(163, 14, 14);
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20%;
+  font-size: xxx-large;
+  letter-spacing: 2px;
+
+  animation: flash; 
+  animation-duration: 2s; 
+}
+  
+.animate__animated.animate__flash {
+  --animate-duration: 5s;
+}
