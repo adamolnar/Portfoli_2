@@ -1,236 +1,225 @@
 /* Global style */
-
 html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-color: black;
-    font-family: 'Russo One', sans-serif;
-    font-size: calc(15px + 0.390625vw);
-    color: white;
-    overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  font-family: 'Russo One', sans-serif;
+  font-size: calc(15px + 0.390625vw);
+  color: white;
+  overflow: hidden;
+}
 
-  }
+/* Set the stars with java script function */  
+.star {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background-color: white;
+}
   
-/* Ser the stars with java script function*/  
-  .star {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background-color: white;
-  }
+/* Set the animation for the intro from Star Wars, color, size and hide the text */
+#intro1 {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  z-index: 99;
+  animation: intro 5s ease-out 1s; 
+  color: rgb(75, 213, 238);
+  font-weight: 400;
+  font-size: 2rem;
+  opacity: 0;
+}
   
-  /* Set the animation, color, size and hide the text */
-  #intro1 {
-      position: absolute;
-      top: 30%;
-      left: 35%;
-      z-index: 99;
-      animation: intro 5s ease-out 1s; 
-      color: rgb(75, 213, 238);
-      font-weight: 400;
-      font-size: 2rem;
-      opacity: 0;
-  }
-  
-  #intro2 {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    z-index: 99;
-    animation: intro 5s ease-out 7s; 
-    color: rgb(75, 213, 238);
-    font-weight: 400;
-    font-size: 2rem;
-    opacity: 0;
+#intro2 {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  z-index: 99;
+  animation: intro 5s ease-out 7s; 
+  color: rgb(75, 213, 238);
+  font-weight: 400;
+  font-size: 2rem;
+  opacity: 0;
 }
 
 #intro3 {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    z-index: 99;
-    animation: intro 5s ease-out 13s; 
-    color: rgb(75, 213, 238);
-    font-weight: 400;
-    font-size: 2rem;
-    opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  z-index: 99;
+  animation: intro 5s ease-out 13s; 
+  color: rgb(75, 213, 238);
+  font-weight: 400;
+  font-size: 2rem;
+  opacity: 0;
 }
 
 #intro4 {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    z-index: 99;
-    animation: intro 5s ease-out 19s; 
-    color: rgb(75, 213, 238);
-    font-weight: 400;
-    font-size: 2rem;
-    opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  z-index: 99;
+  animation: intro 5s ease-out 19s; 
+  color: rgb(75, 213, 238);
+  font-weight: 400;
+  font-size: 2rem;
+   opacity: 0;
 }   
 
 #intro5 {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    z-index: 9;
-    animation: intro 5s ease-out 25s; 
-    color: rgb(75, 213, 238);
-    font-weight: 400;
-    font-size: 2rem;
-    opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  z-index: 9;
+  animation: intro 5s ease-out 25s; 
+  color: rgb(75, 213, 238);
+  font-weight: 400;
+  font-size: 2rem;
+  opacity: 0;
 }   
 
+/* Opacity for intro text, so one text shos after first one is fade out */
 @keyframes intro  {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Color of text displayed in Game rules explanation */
+p {
+  color: #e6c54d;
 }
   
-  p {
-    color: #e6c54d;
-  }
+/* Set the font, lean the board, position it */
+#board {
+  transform: perspective(15rem) rotateX(20deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  position: absolute;
+  font-weight: bold;
+  overflow: hidden;
+  font-size: 1.8rem;
+  height: 50em;
+  width: 80%;
+  margin: 0 10%;
+  bottom: 0;
+  z-index: 1;
+}
   
-  /* Set the font, lean the board, position it */
-  #board {
-    transform: perspective(15rem) rotateX(20deg);
-    transform-origin: 50% 100%;
-    text-align: justify;
-    position: absolute;
-    font-weight: bold;
-    overflow: hidden;
-    font-size: 1.8rem;
-    height: 50em;
-    width: 80%;
-    margin: 0 10%;
-    bottom: 0;
-    z-index: 1;
-    
+#board:after {    
+  position: absolute;
+  content: ' ';
+  bottom: 60%;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+  
+/* Set the scrolling animation and position it */
+#content {
+  animation: scroll 110s linear 28s ;
+  position: absolute;
+  top: 100%;
+  z-index: 2;
+}
 
-  }
-  
-  #board:after {    
-    position: absolute;
-    content: ' ';
-    bottom: 60%;
-    left: 0;
-    right: 0;
-    top: 0;
-  }
-  
-  /* Set the scrolling animation and position it */
-  #content {
-    animation: scroll 110s linear 28s ;
-    position: absolute;
+#title, #subtitle {
+  text-align: center;
+}
+ 
+/* Scroll effect for the Game Rulse text */
+@keyframes scroll {
+  0% {
     top: 100%;
-    z-index: 2;
   }
-
-  #title, #subtitle {
-    text-align: center;
+  100% {
+    top: -170%;
   }
-  
-  @keyframes scroll {
-      0% {
-          top: 100%;
-      }
-      100% {
-          top: -170%;
-      }
-  }
+}
    
-  #rules {
-    text-align: center;
-  }
-
-  /* Set the styling for the START button and it container */
-
-  #bt {
-    width: 20%;
-    margin: 0 40%;
-    padding: 15px;
-    bottom: 2%;
-    background-color: #e6c54d;
-    position:absolute;
-    display: inline-block;
-    border-radius: 2rem;
-    text-align: center;
-    animation: clickit 80s;
+#rules {
+  text-align: center;
 }
 
-  /* Add animation to start game button*/
-   @keyframes clickit {
-    0% {opacity: 0}
-    80% {opacity: 0}
-    100% {opacity: 1}
+/* Set the styling for the START button and it container */
+#bt {
+  width: 20%;
+  margin: 0 40%;
+  padding: 15px;
+  bottom: 2%;
+  background-color: #e6c54d;
+  position:absolute;
+  display: inline-block;
+  border-radius: 2rem;
+  text-align: center;
+  animation: clickit 80s;
 }
 
+/* Add animation to start game button */
+@keyframes clickit {
+  0% {opacity: 0}
+  80% {opacity: 0}
+  100% {opacity: 1}
+}
 
-  .button {
-    width: 100%;
-    border: none;
-    text-decoration: none;
-    cursor: pointer;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    background-color: #e6c54d;
-    border-radius: 2rem;
+/* Start game button with animation */
+.button {
+  width: 100%;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  background-color: #e6c54d;
+  border-radius: 2rem;
+}
 
-  }
-
-
-  /* Add stylink for the button link */
-
+/* Add stylink for the button link */
 .button  a {
-    position: relative;
-    z-index: 3;
-    text-decoration: none;
-    font-family: 'Russo One', sans-serif;  
-    color: white;
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  font-family: 'Russo One', sans-serif;  
+  color: white;
 }
-
-
-  
 
 /* Add media queries to the start button */
 @media screen and (max-width: 670px) {
-    #bt {
-        width: 40%;
-        margin: 0 30%;
-        padding: 5px;
-        font-size: 15px;
-
-    }
+#bt {
+  width: 40%;
+  margin: 0 30%;
+  padding: 5px;
+  font-size: 15px;
   }
-
-  @media screen and (max-width: 300px) {
-    .button a {
-         font-size: 20px;
-    }
-  }
-
-/* Add fast forward glyphicon to the top of the page */
-
-.glyphicon {
-    position: absolute;
-    z-index: 4;
-    margin-top: 2%;
-    margin-left: 2%;
-    font-size: 150%;
 }
 
+@media screen and (max-width: 300px) {
+.button a {
+  font-size: 20px;
+  }
+}
 
-/* Audio icon and buttons styling*/
+/* Fast forward glyphicon to go to game.html */
+.glyphicon {
+  position: absolute;
+  z-index: 4;
+  margin-top: 2%;
+  margin-left: 2%;
+  font-size: 150%;
+}
+
+/* Audio icon and buttons styling */
 .audio-section {
   float: right;
   height: fit-content;
@@ -240,16 +229,18 @@ html, body {
   font-weight: 900;
 }
 
-
+/* Control audio buttons styling */
 .controle-btn {
   background-color:rgb(75, 213, 238);
   font-weight: 900;
 }
 
-i#playbutton_player {
+/* Play icon */
+#playbutton_player {
   margin-bottom: 10px;
 }
 
+/* Audio stop icon */
 i.fa-solid.fa-volume-xmark.fa-l {
   margin-bottom: 10px;
 }

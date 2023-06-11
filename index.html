@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- fontawesome and google fonts -->
+    <!-- Fontawesome and google fonts -->
     <script src="https://kit.fontawesome.com/84c12be1a5.js" crossorigin="anonymous"></script>    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu&display=swap" rel="stylesheet">
@@ -21,25 +21,21 @@
 </head>
 
 <body>
-
-    <!--Add fast forward glyphicon to the next  page -->
+    <!-- Fast forward glyphicon to the game.html -->
+    <a href="./assets/game.html">
+        <span class="glyphicon glyphicon-fast-forward"><i class="fa-solid fa-forward" style="color: #e6c54d;"><abbr title=""></abbr></i></span>
+    </a>
     
-        <a href="./assets/game.html">
-            <span class="glyphicon glyphicon-fast-forward"><i class="fa-solid fa-forward" style="color: #e6c54d;"><abbr title=""></abbr></i></span>
-        </a>
-    
-
-    <!--Add audio-->
+    <!--Audio-->
     <div class="audio-section">
         <audio id="player">
             <source src="/assets/audio/audio.mp3" type="audio/mp3">
             This HTML5 player is not supported by your browser
         </audio>
-
+    <!-- Audio icons -->
         <span><i class="fa-solid fa-volume-high fa-l" style="color: #e6c54d;"  style="cursor: pointer" name="play" id="playbutton_player" onClick="playAudio('player')" onMouseover="playbutton_player.src='play-over.png'" onMouseout="playbutton_player.class='fa-solid fa-volume-high fa-2xl'"></i></span>        
         <span id="x" style="display: none;"><i class="fa-solid fa-volume-xmark fa-l" style="color: #e6c54d;"  class="x-volume" name="pause"  onClick="pauseAudio('player')" onMouseover="pausebutton_player.class='fa-solid fa-volume-xmark fa-2xl'" onMouseout="pausebutton_player.src='pause.png'" ></i></span>  
-        
-        
+    <!-- Control buttons -->       
         <div>
             <button onClick="document.getElementById('player').volume -= 0.2" class="controle-btn"><span><i class="fa-solid fa-volume-low"></i> <i class="fa-solid fa-minus fa-2xs"></i></span></button>
             <button onClick="resetAudio('player')" name="reset" id="resetbutton_player"  class="controle-btn"><span><i class="fa-solid fa-arrow-rotate-right fa-sm" style="color: #de1b42;" ></i></span></button>
@@ -47,7 +43,7 @@
          </div>
     </div>   
 
-
+    <!-- Star wars inspired intro from CodePen -->
     <section>
        <p id="intro1">A long time ago, in a galaxy far,<br> far away.... </p> 
        <p id="intro2">The Dark Forces conquered the planet Gnies!</p>
@@ -73,17 +69,17 @@
         </div>
     </section>
      
-    <!-- START game button with animation -->
+    <!-- Start game button with animation -->
     <div id="bt">
         <button class = "button">
             <a href="./assets/game.html">Start</a> 
         </button>
     </div>
     
-    
+    <!-- Java Script -->
     <script src="assets/js/script.js"></script>
 
-    <!-- font awesome script  -->
+    <!-- Font awesome script  -->
     <script src="https://kit.fontawesome.com/84c12be1a5.js" crossorigin="anonymous"></script>
 </body>
 </html>

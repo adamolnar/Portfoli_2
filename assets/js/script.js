@@ -1,5 +1,4 @@
 //--------------------BACKGROUND STARS---------------------
-
 // Sets the number of stars  to display
 const numStars = 200;
 
@@ -13,6 +12,7 @@ for (let i = 0; i < numStars; i++) {
   document.body.append(star);
 }
 
+
 // Gets random x, y values based on the size of the container
 function getRandomPosition() {  
   let y = window.innerWidth;
@@ -24,7 +24,6 @@ function getRandomPosition() {
 
      
 //---------------------MODAL BOX-------------------------
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -51,8 +50,8 @@ window.onclick = function(event) {
   }
 }
 
-//----------------------------AUDIO--------------------------------------------
 
+//----------------------------AUDIO-------------------------
 // Function to click on icon to play audio
 function playAudio(player)
 {
@@ -73,19 +72,12 @@ function resetAudio(player)
    document.getElementById(player).currentTime = 0;
 }
 
-// When the user clicks the button, show the volume down icon 
-
-
-
 
 // ----------------------GAME----------------------
-
 // Counting score 
 let playerScore = 0;
 let computerScore = 0; 
 let moves = 0;
-
-
 
 let userChoice = "";
 let computerChoice = "";
@@ -122,6 +114,7 @@ function handlePlayerChoice(event) {
 let nextRound = document.getElementById('next-round');
 nextRound.addEventListener('click', nextRoundBtn);
 
+// Function to reset user and computer choice and pick choice again
 function nextRoundBtn() {
       shuffleIntervalID = setInterval(shuffleEmojis, 150);
 }
@@ -249,9 +242,9 @@ function determineWinner() {
 // Function to end the game and determine final winner.
 function gameOver() {
       if (playerScore > computerScore) {
-            window.location.href = "win.html";  // Redirect browser to win.html or add your own winning page or custom function
+            window.location.href = "win.html";  
       } else {
-            window.location.href = "lose.html"; // Redirect browser to lose.html or add your own losing page or custom function
+            window.location.href = "lose.html"; 
       }
 }
 
@@ -259,9 +252,7 @@ function gameOver() {
     shuffleIntervalID = setInterval(shuffleEmojis, 150);
 
 
-
 //------------------------GAME OVER---------------------------------
-
 // Function to dispaly Game Over 
 function myoutput() {
       document.getElementById('_gover').innerHTML = "Game Over";
@@ -273,15 +264,12 @@ function myoutput() {
 
 
 // Function to play again game and redirect it to game.html
-
 function playAgain () {
-      window.location.href = "game.html";  // Redirect browser to game.html
+      window.location.href = "game.html"; 
 };      
 
 
-
-//----------------------- Congarulations confetti from Codehim-------------------------------------------
-
+//----------------------- CONFETTI FROM CODEHIM--------------------------
 //Var Inits
 canvas = document.getElementById("canvas");
 ctx = canvas.getContext("2d");

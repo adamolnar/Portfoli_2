@@ -1,17 +1,16 @@
 /* Global style */
-
 html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background-color: black;
-    font-family: 'Russo One', sans-serif;
-    font-size: calc(15px + 0.390625vw);
-    color: white;
-    overflow: hidden;
-  }
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  font-family: 'Russo One', sans-serif;
+  font-size: calc(15px + 0.390625vw);
+  color: white;
+  overflow: hidden;
+}
 
-/* Ser the stars with java script function*/
+/* Set the stars with java script function */
 .star {
   position: absolute;
   width: 1px;
@@ -38,7 +37,7 @@ html, body {
   color: #E44141;
 }
 
-/* Congratulations confetti from Codehim*/
+/* Congratulations confetti from Codehim */
 .confetti{
   height: 640px;
   width: 100%;
@@ -49,6 +48,7 @@ html, body {
   z-index: 2;
 }
 
+/* Header with win/lose text */
 #you-won {
   color: rgb(75, 213, 238);
   font-size: 25px;
@@ -74,7 +74,6 @@ html, body {
 .animate__animated.animate__zoomIn {
   --animate-duration: 2s;
 }
-
 
 /* Play Again button*/
 button {

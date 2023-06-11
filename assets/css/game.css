@@ -1,61 +1,29 @@
-/* Add styling to body of game.html*/
-
-
+/* Add styling to body of game.html */
 html, body{
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
-    display: block;
-  }
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: block;
+}
   
-  body{
-    background: #000;
-    text-align: center;
-    font-size: calc(15px + 0.390625vw);
-    font-family: 'Russo One', sans-serif;
-    color: white;
-  }
-  
-
-/* Ser the stars with java script function*/
-  .star {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background-color: white;
-  }
-
-/* Audio icon and buttons styling*/
-.audio-section {
-  height: fit-content;
-  margin-top: 30px;
-  margin-right: 20px;
+body{
+  background: #000;
   text-align: center;
-  font-weight: 900;
+  font-size: calc(15px + 0.390625vw);
+  font-family: 'Russo One', sans-serif;
+  color: white;
+}
+  
+/* Set the stars with java script function */
+.star {
   position: absolute;
-  z-index: 4;
-  left: 0;
+  width: 1px;
+  height: 1px;
+  background-color: white;
 }
 
-
-.controle-btn {
-  background-color:rgb(75, 213, 238);
-  font-weight: 900;
-}
-
-i#playbutton_player {
-  margin-bottom: 10px;
-}
-
-i.fa-solid.fa-volume-xmark.fa-l {
-  margin-bottom: 10px;
-}
-
-
-
-/* ----------hyper links to next or prevoiuse page*/
-
+/* Icon styling for back to index.html button */
 i.fa-solid.fa-backward {
   position: absolute;
   z-index: 4;
@@ -65,22 +33,14 @@ i.fa-solid.fa-backward {
   left: 0;
 }
 
-i.fa-solid.fa-forward {
-  position: absolute;
-  z-index: 4;
-  margin-top: 2%;
-  margin-left: 6%;
-  font-size: 150%;
-}
-  /*----------game layout--------------*/
-
+/* Game layout */
 #welcome-to{
-    font-size: 30px;
-    color: #e6c54d;  
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin: 20px auto;
-    width: fit-content;
+  font-size: 30px;
+  color: #e6c54d;  
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 20px auto;
+  width: fit-content;
 }
 
 #game_name {
@@ -92,64 +52,60 @@ i.fa-solid.fa-forward {
 }
 
 h1{
-    margin-top: 2px;
-    font-size: 225%;
-    margin-bottom: 10px;
-    color: black;
-
+  margin-top: 2px;
+  font-size: 225%;
+  margin-bottom: 10px;
+  color: black;
 }
 
 h2 {
-    height: 48px;
-    font-size: 36px;
-    color: white;
-    color:  #e6c54d;
-
+  height: 48px;
+  font-size: 36px;
+  color: white;
+  color:  #e6c54d;
 }
 
+/* Styling for the main area of the game*/
 main {
-    display: inline-flex;
-    justify-content: space-around;
-    width: 100%;   
-    margin: 2% auto;
-    color: black;    
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;   
+  margin: 2% auto;
+  color: black;    
 }
 
 h3{
-    font-size: 46px;
-    color:rgb(75, 213, 238);
-    padding: 20px;
+  font-size: 46px;
+  color:rgb(75, 213, 238);
+  padding: 20px;
 }
 
-
-
-
-
+/* Inline containers for computer and user choice */
 .game-container {
-    background-color: rgb(75, 213, 238);
-    border-radius: 20px;
-    padding: 0px;
-    margin: 10px;
-    font-size: 32px;
-    width: 100%;
-    height: fit-content;
+  background-color: rgb(75, 213, 238);
+  border-radius: 20px;
+  padding: 0px;
+  margin: 10px;
+  font-size: 32px;
+  width: 100%;
+  height: fit-content;
 }
 
 .choice-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    height: 100px;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  height: 100px;
+  padding: 10px;
 }
 
 .emoji {
-    font-size: 60px;
-    margin-top: 40px;
+  font-size: 60px;
+  margin-top: 40px;
 }
 
-/* Add styling to the button to show game result*/
+/* Styling of the button to show game result*/
 #game-result-message {
   background-color: rgb(75, 213, 238);
   width: 94%;
@@ -157,18 +113,17 @@ h3{
   border-radius: 20px;
   padding: 20px;
   color: black;
-
 }
   
 .score {
-    width: 97%;
-    height: 100px;
-    margin: 0 auto;
-    font-size: 20px;
-    border-radius: 20px;
-    color: #e6c54d;
-    display: inline-flex;
-    justify-content: space-around;
+  width: 97%;
+  height: 100px;
+  margin: 0 auto;
+  font-size: 20px;
+  border-radius: 20px;
+  color: #e6c54d;
+  display: inline-flex;
+  justify-content: space-around;
 }  
 
 .score h2 {
@@ -184,8 +139,7 @@ p.p-count.count {
   margin: 0;
 }
 
-
-/*---------MODAL (W3School)---------*/
+/* Moda styling */
 
 .modal {
   display: none; 
@@ -211,14 +165,11 @@ p.p-count.count {
   width: 80%;
 }
 
-
-
 /* The Close Button */
 .close {
   color: white;
   float: right;
   font-size: 50px;
- 
 }
 
 .close:hover,
@@ -250,12 +201,14 @@ p.p-count.count {
   right: 0;
 }
 
+/* Media queries for smaller screen responsivnes */
 @media only screen and (max-width: 600px) {
-  body {
-   font-size: 0%;
+body {
+  font-size: 0%;
   }
 }
 
+/* Styling for the conteiner with number of moves left before game ends */
 .movesleft {
   width: 180px;
   margin: 0 auto;
