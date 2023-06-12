@@ -33,13 +33,13 @@
             This HTML5 player is not supported by your browser
         </audio>
     <!-- Audio icons -->
-        <span><i class="fa-solid fa-volume-high fa-l" style="color: #e6c54d;"  style="cursor: pointer" name="play" id="playbutton_player" onClick="playAudio('player')" onMouseover="playbutton_player.src='play-over.png'" onMouseout="playbutton_player.class='fa-solid fa-volume-high fa-2xl'"></i></span>        
-        <span id="x" style="display: none;"><i class="fa-solid fa-volume-xmark fa-l" style="color: #e6c54d;"  class="x-volume" name="pause"  onClick="pauseAudio('player')" onMouseover="pausebutton_player.class='fa-solid fa-volume-xmark fa-2xl'" onMouseout="pausebutton_player.src='pause.png'" ></i></span>  
+        <span><i class="fa-solid fa-volume-high fa-l" style="color: #e6c54d;" id="playbutton_player" onClick="playAudio('player')" ></i></span>        
+        <span><i class="fa-solid fa-volume-xmark fa-l" style="color: #e6c54d; display: none;"  class="x-volume" id="pausebutton_player" name="pause"  onClick="pauseAudio('player')" ></i></span>  
     <!-- Control buttons -->       
         <div>
-            <button onClick="document.getElementById('player').volume -= 0.2" class="controle-btn"><span><i class="fa-solid fa-volume-low"></i> <i class="fa-solid fa-minus fa-2xs"></i></span></button>
-            <button onClick="resetAudio('player')" name="reset" id="resetbutton_player"  class="controle-btn"><span><i class="fa-solid fa-arrow-rotate-right fa-sm" style="color: #de1b42;" ></i></span></button>
-            <button onClick="document.getElementById('player').volume += 0.2" class="controle-btn"><span><i class="fa-solid fa-volume-high"></i> <i class="fa-solid fa-plus fa-2xs"></i></span></button>
+            <button onClick="document.getElementById('player').volume -= 0.2" id="down-volume" class="controle-btn" style="display: none;"><span><i class="fa-solid fa-volume-low" ></i> <i class="fa-solid fa-minus fa-2xs"></i></span></button>
+            <button onClick="resetAudio('player')" id="resetbutton_player"  class="controle-btn" style="display: none;"><span><i class="fa-solid fa-arrow-rotate-right fa-sm" style="color: #de1b42;" ></i></span></button>
+            <button onClick="document.getElementById('player').volume += 0.2" id="up-volume" class="controle-btn" style="display: none;"><span><i class="fa-solid fa-volume-high" ></i> <i class="fa-solid fa-plus fa-2xs"></i></span></button>
          </div>
     </div>   
 

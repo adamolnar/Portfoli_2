@@ -58,7 +58,9 @@ function playAudio(player)
    document.getElementById(player).play();
    document.getElementById("pausebutton_" + player).style.display = "";
    document.getElementById("playbutton_" + player).style.display = "none";
-   document.getElementById("resetbutton_" + player).style.display = "none";
+   document.getElementById("resetbutton_" + player).style.display = "";
+   document.getElementById("down-volume").style.display = "";
+   document.getElementById("up-volume").style.display = "";
 }
 function pauseAudio(player)
 {
@@ -66,6 +68,8 @@ function pauseAudio(player)
    document.getElementById("playbutton_" + player).style.display = "";
    document.getElementById("pausebutton_" + player).style.display = "none";
    document.getElementById("resetbutton_" + player).style.display = "none";
+   document.getElementById("down-volume").style.display = "none";
+   document.getElementById("up-volume").style.display = "none";
 }
 function resetAudio(player)
 {

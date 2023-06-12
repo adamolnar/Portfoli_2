@@ -239,6 +239,7 @@ p {
 /* Play icon */
 #playbutton_player {
   margin-bottom: 10px;
+  margin-right: 50px;
 }
 
 /* Audio stop icon */
