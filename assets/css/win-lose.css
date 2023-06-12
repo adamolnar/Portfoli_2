@@ -37,17 +37,6 @@ html, body {
   color: #E44141;
 }
 
-/* Congratulations confetti from Codehim */
-.confetti{
-  height: 640px;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-  user-select: none;
-  position: absolute;
-  z-index: 2;
-}
-
 /* Header with win/lose text */
 #you-won {
   color: rgb(75, 213, 238);
@@ -85,7 +74,7 @@ button {
   position: absolute;
   z-index: 10;
   margin: 0 40%;
-  margin-top: 15%;
+  margin-top: 10%;
   width: 20%;
 }
   
@@ -111,4 +100,12 @@ button {
 @media only screen and (max-width: 450px) {
 #congrats {font-size: x-large;}
 button {width: auto;}
+}
+
+/* Confetti basic styles for black background and crosshair cursor */
+canvas {
+	cursor: crosshair;
+	display: block;
+  position: absolute;
+  z-index: 1;
 }
