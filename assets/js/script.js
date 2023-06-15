@@ -101,7 +101,7 @@ userChoiceContainer.addEventListener("click", handlePlayerChoice);
 function handlePlayerChoice(event) {
   if (!event.target.classList.contains("emoji") || moves >= 10) return;  
   userChoice = event.target.textContent;
-  userChoiceContainer.innerHTML = `<p class="emoji">${userChoice } </p>`;
+  userChoiceContainer.innerHTML = `<p class="emoji">${userChoice}</p>`;
   clearInterval(shuffleIntervalID);
   moves++; 
   document.querySelector('.movesleft').innerText = `Moves Left: ${10 - moves}`;
@@ -109,10 +109,7 @@ function handlePlayerChoice(event) {
       if (moves == 10) {
             gameOver();
       } else {
-            shuffleEmojis;
-            nextRoundBtn;
-            document.getElementsByClassName('emoji').innerHTML;
-      }
+            shuffleEmojis();           
 }
 
 // Function to generate computer and user choice
@@ -263,11 +260,3 @@ function gameOver() {
 function playAgain () {
       window.location.href = "game.html"; 
 };      
-
-
-
-
-
-
-
-
