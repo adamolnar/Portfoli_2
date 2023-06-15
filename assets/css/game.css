@@ -227,13 +227,13 @@ button#next-round {
 /* Media queries for smaller screen responsivnes */
 @media only screen and (max-width: 650px) {
 body {font-size: 15px;}
-#myBtn {margin: 5px 5px; padding: 0;}
+#myBtn {margin: 5px 5px; padding-block: 2px;}
 #welcome-to {font-size: 20px; letter-spacing: 0;}
 h1 {font-size: 150%; }
 .emoji {font-size: inherit; margin-top: 0; display: contents;}
 .choice-container {display: block; }
 .game-container {font-size: 20px;}
-button#next-round {font-size: 20px; padding: 5px;}
+button#next-round {font-size: 20px; padding: 8px;}
 .score h2 {font-size: 20px;}
 h2 {height: 30px;}
 .score {margin-top: 10%;}
@@ -251,6 +251,7 @@ h3 {font-size: 20px; padding: 10px;}
   main {margin: 5% auto;}
   .game-container {font-size: 16px; padding-top: 10px;}
   .modal-content p  {margin-block-start: 0; margin-block-end: 0;}
+  #playbutton_player {margin-right: 0; }
 }
   
   

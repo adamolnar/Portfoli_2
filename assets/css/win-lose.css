@@ -98,8 +98,9 @@ button {
 
 /* Media queries for smaller screen responsivnes */
 @media only screen and (max-width: 450px) {
-#congrats {font-size: x-large;}
-button {width: auto;}
+#congrats {font-size: x-large; margin-top: 30%;}
+button {width: 60%; margin: 0 20%;}
+#game-over {margin-top: 50%;}
 }
 
 /* Confetti basic styles for black background and crosshair cursor */
