@@ -39,7 +39,7 @@ i.fa-solid.fa-backward {
   color: #e6c54d;  
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 20px auto;
+  margin: 50px auto;
   width: fit-content;
 }
 
@@ -232,7 +232,6 @@ h1 {font-size: 150%; }
 .emoji {font-size: inherit; margin-top: 0;}
 .choice-container {display: block; }
 .game-container {font-size: 20px;}
-p {display: contents;}
 button#next-round {font-size: 20px; padding: 5px;}
 .score h2 {font-size: 20px;}
 h2 {height: 30px;}
@@ -245,11 +244,11 @@ h3 {font-size: 20px; padding: 10px;}
 @media only screen and (max-width: 350px) {
   button#next-round {font-size: 16px; padding: 2px;}  
   .score h2 {font-size: 15px;}
-  p {height: 200px;}
   .choice-container {display: table-row-group;}
   #welcome-to {margin: 40px auto;}
   main {margin: 5% auto;}
   .game-container {font-size: 16px; padding-top: 10px;}
+  .modal-content p  {margin-block-start: 0; margin-block-end: 0;}
 }
   
   
