@@ -122,6 +122,9 @@ nextRound.addEventListener('click', nextRoundBtn);
 // Function to reset user and computer choice and pick choice again
 function nextRoundBtn() {
       shuffleIntervalID = setInterval(shuffleEmojis, 150);
+      
+
+      
 }
 
 // Function to return a random emoji from the dictionary and  genenerate computer choice.
@@ -255,6 +258,7 @@ function gameOver() {
 
 // Function to shuffle emojis in the game and to show full emoji choice to the user
     shuffleIntervalID = setInterval(shuffleEmojis, 150);
+    handlePlayerChoice();
 
 
 //------------------------GAME OVER---------------------------------
