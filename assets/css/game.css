@@ -113,11 +113,12 @@ h3{
   border-radius: 20px;
   padding: 20px;
   color: black;
+  height: 25px;
 }
   
 .score {
   width: 97%;
-  height: 100px;
+  height: 80px;
   margin: 0 auto;
   font-size: 20px;
   border-radius: 20px;
@@ -229,7 +230,7 @@ body {font-size: 15px;}
 #myBtn {margin: 5px 5px; padding: 0;}
 #welcome-to {font-size: 20px; letter-spacing: 0;}
 h1 {font-size: 150%; }
-.emoji {font-size: inherit; margin-top: 0;}
+.emoji {font-size: inherit; margin-top: 0; display: contents;}
 .choice-container {display: block; }
 .game-container {font-size: 20px;}
 button#next-round {font-size: 20px; padding: 5px;}
@@ -238,6 +239,7 @@ h2 {height: 30px;}
 .score {margin-top: 10%;}
 h3 {font-size: 20px; padding: 10px;}
 #game-result-message {width: auto;}
+#game_name {padding: 10px;}
 }
 
 /* Media queries for smaller screen responsivnes */
