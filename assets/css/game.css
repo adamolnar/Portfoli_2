@@ -228,15 +228,15 @@ button#next-round {
 @media only screen and (max-width: 650px) {
 body {font-size: 15px;}
 #myBtn {margin: 5px 5px; padding-block: 2px;}
-#welcome-to {font-size: 20px; letter-spacing: 0; margin-top: 20%;}
-h1 {font-size: 150%; }
+#welcome-to {font-size: 20px; letter-spacing: 0; margin-top: 20%; margin: 80px auto;}
+h1 {font-size: 100%; }
 .emoji {font-size: inherit; margin-top: 0; display: contents;}
 .choice-container {display: block; }
 .game-container {font-size: 20px;}
 button#next-round {font-size: 20px; padding: 8px;}
 .score h2 {font-size: 20px;}
 h2 {height: 30px;}
-.score {margin-top: 10%;}
+.score {margin: 50px auto;}
 h3 {font-size: 20px; padding: 10px; margin-top: 20%;}
 #game-result-message {width: auto;}
 #game_name {padding: 10px;}
@@ -253,9 +253,13 @@ h3 {font-size: 20px; padding: 10px; margin-top: 20%;}
   .modal-content p  {margin-block-start: 0; margin-block-end: 0;}
   #playbutton_player {margin-right: 0;}
   .close {font: 30px;}
+  #game-result-message {height: 5px;}
 }
   
-  
+/* Media queries for bigger screen responsivnes */
+@media only screen and (min-width: 1400px) {
+  #welcome-to {margin: 100px auto;}
+}
   
   
   
