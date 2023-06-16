@@ -1,4 +1,4 @@
-![Scrrenhot with the name of the game](/assets/images/Screenshot_game_title.png)
+![Screenshot with the name of the game](/assets/images/Screenshot_game_title.png)
 
 ### This game is a five-gesture expansion of the classic selection method game rock-paper-scissors. It operates on the same basic principle, but includes two additional weapons: the lizard (formed by the hand as a sock-puppet-like mouth) and Spock (formed by the Star Trek Vulcan salute).
 <p>&nbsp;</p>
@@ -17,7 +17,7 @@
 - Opening
   - Star Wars inspired opening with game plot explaining story to the user of Galaxy being in jeopardy by evil forces. In order to save the planet Gnies and free the innocent, user must win the Rock, Paper, Scissors, Lizard, Spock game! User has 10 moves after which winner will be determined.
 
-![Scrrenhot of the game's plot](/assets/images/Screenshot_game_plot.png)
+![Screenshot of the game's plot](/assets/images/Screenshot_game_plot.png)
 <p>&nbsp;</p>
 
 - "Opening Crawl" 
@@ -32,7 +32,7 @@
 - Audio
   - This icon in the right-top corner lets user, by clicking on it, to play Star Wars Main Theme Audio as a exciting addition for user experience. After clicking on speaker icon, user has options to controle the audio track by controle buttons: volume down, volume up, reset to beggining or stoping the audio from playing. 
 
-![Scrrenhot of the opening crawl](/assets/images/Screenshot_intro.png)
+![Screenshot of the opening crawl](/assets/images/Screenshot_intro.png)
 <p>&nbsp;</p>
 
 ## Game Area
@@ -46,17 +46,46 @@
 - Computer
   - This container schuffle 5 emojis till the user click on his choice. Once on of the user emoji is picked the schuffle stops and it shows random computer choice. 
 
-![Scrrenhot of the game.html](/assets/images/Screenshot_game_html.png)
+![Screenshot of the game.html](/assets/images/Screenshot_game_html.png)
 <p>&nbsp;</p>
 
+- Game Result Message 
+  - In this container user can see a text with statement which elements wins over which and why.
 
+- Player Score
+  - In this area user can see how many points he won.
 
+- Computer Score 
+  - In this area user can see how many points computer has.
 
+- Next Round 
+  - By clicking on this button user starts new emoji shuffle for the computer choice and generates all 5 emojis in the player container, so user can have his next move.
 
+- Moves Left
+  - In this area user can see how many moves is left till end of the game.
+
+![Screenshot of the game after pick](/assets/images/Screenshot_game_area_after_pick.png)
+<p>&nbsp;</p>
 
 - Game Rules
   - In the right-top corner, by clicking on it, user has accesss to modal box with cheat sheet of rules to plan better strategy of winning this game.
 
-![Scrrenhot of the game.html](/assets/images/Screenshot_modal_box.png)
+![Screenshot of modal box](/assets/images/Screenshot_modal_box.png)
 <p>&nbsp;</p>
 
+## You won
+ - This page is loading after all 10 moves are done and if users score is higher then computer's.
+ - Zoom in congartulations text appers to show the user that he has won thi battle.
+ - Confetti from CodePen are a visual effect as a bonus user experience. 
+ - Play Again button gives the user possibilite to play again. By clicking on it game area is loaded and user can start to play from the beginning. 
+
+![Screenshot you won page](/assets/images/Screenshot_you_won.png)
+<p>&nbsp;</p>
+
+## You lost
+ - This is a page loading after all 10 moves are done and if users score is lower then computer's. 
+ - With the flash red Game Over animation and "You lost!" user has clear visual understanding that this battle is over for him.
+ - Play Again button gives the user possibilite to play again. By clicking on it game area is loaded and user can start to play from the beginning. 
+
+![Screenshot you lost page](/assets/images/Screenshot_you_lost.png)
+<p>&nbsp;</p>
