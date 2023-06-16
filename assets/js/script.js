@@ -111,6 +111,7 @@ function handlePlayerChoice(event) {
       } else {
             shuffleEmojis();           
 }
+}
 
 // Function to generate computer and user choice
 let nextRound = document.getElementById('next-round');
