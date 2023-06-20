@@ -74,7 +74,7 @@ main {
   color: black;    
 }
 
-h3{
+#vs{
   font-size: 46px;
   color:rgb(75, 213, 238);
   padding: 20px;
@@ -237,7 +237,7 @@ button#next-round {font-size: 20px; padding: 8px;}
 .score h2 {font-size: 20px;}
 h2 {height: 30px;}
 .score {margin: 50px auto;}
-h3 {font-size: 20px; padding: 10px; margin-top: 20%;}
+#vs {font-size: 20px; padding: 10px; margin-top: 20%;}
 #game-result-message {width: auto;}
 #game_name {padding: 10px;}
 }
