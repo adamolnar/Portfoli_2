@@ -138,8 +138,20 @@
 
 # Credits
 ## Content
--
+- The code for the index.html intro was taken from [CodePen](https://codepen.io/christopherkade/pen/rJVPjz).
+- The code for modal box with game rules was taken from [W3School](https://www.w3schools.com/howto/howto_css_modals.asp).
+- The code for the game was written by following [CodeWizardsHQ](https://www.codewizardshq.com/javascript-tutorial-for-kids-rock-paper-scissors/) tutorial and code from [GeeksForGeeks](https://ide.geeksforgeeks.org/online-html-editor/0dd9e95b-6567-453b-95fb-cb4226616bbf).
+- Play again button was inspired by [TeamTreeHouse](https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button). 
+- Audio tag with icon code was inspire by [StackOverflow](https://stackoverflow.com/questions/63740598/how-can-i-use-html-audio-tag-with-icon) and [Tutorial](http://www.nof-tutorials.com/HTML5-Player/Tutorial/tutorial.html).
+- Confetti for the win.html was copied from [CodePen](https://codepen.io/programking/pen/AJgeEd).
+
+
+
 
 
 ##  Media 
-- 
+- Emojis were taken from [Emojipedia](https://emojipedia.org/scissors/).
+- Audio was taken from [YouTube](https://www.youtube.com/watch?v=_D0ZQPqeJkk) and converted to mp3 on [OnlyMP3](https://en.onlymp3.to/259/).
+- Game favicon was copied from [TheNounProject](https://thenounproject.com/icon/galaxy-1081168/).
+
+
