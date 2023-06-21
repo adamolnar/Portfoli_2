@@ -90,6 +90,7 @@ let emojis = ["✂️ ", "📄", "🪨", "🦎", "🖖🏻"];
 let currentEmojiNumber = 0;
 
 let shuffleIntervalID;
+let playAgainEmoji;
 
 let userChoiceContainer = document.querySelector("#player-choice-container");
 let emojiShuffleElement = document.querySelector("#emoji-shuffle");
@@ -119,8 +120,14 @@ nextRound.addEventListener('click', nextRoundBtn);
 
 // Function to reset user and computer choice and pick choice again
 function nextRoundBtn() {
-      shuffleIntervalID = setInterval(shuffleEmojis, 150);   
+      shuffleIntervalID = setInterval(shuffleEmojis, 150); 
+      playerEmojis();
 }
+
+function playerEmojis() {
+      playAgainEmoji = getElementById('player-choice-container');
+      userChoiceContainer.textContent = playAgainEmoji;
+    }
 
 // Function to return a random emoji from the dictionary and  genenerate computer choice.
 function shuffleEmojis() {
