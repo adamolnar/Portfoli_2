@@ -115,7 +115,32 @@
 
 ## Bugs
 ### Solved Bugs
--
+- Scissors emoji when chosen by user wasn't showing score and result message.
+
+<!--Options available to player to play game -->
+            <div class="choice-container" id="player-choice-container">
+                <p class="emoji">🪨</p>
+                <p class="emoji">📄</p>
+                <p class="emoji">✂️</p>
+                <p class="emoji">🦎</p>
+                <p class="emoji">🖖🏻</p>
+            </div>
+
+
+- After adding white space directly to scissors emoji in game.html, issue was solved.
+
+<!--Options available to player to play game -->
+            <div class="choice-container" id="player-choice-container">
+                <p class="emoji">🪨</p>
+                <p class="emoji">📄</p>
+                <p class="emoji">✂️ </p>
+                <p class="emoji">🦎</p>
+                <p class="emoji">🖖🏻</p>
+            </div>
+        </div>
+
+        
+
 
 ### Validator Testing
 - HTML
