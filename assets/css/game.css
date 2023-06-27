@@ -105,6 +105,14 @@ main {
   margin-top: 40px;
 }
 
+/* Style the active class, and buttons on mouse-over */
+.active, .emoji:hover {
+  background-color: rgba(20, 83, 93, 0.9);
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+}
+
 /* Styling of the button to show game result*/
 #game-result-message {
   background-color: rgb(75, 213, 238);

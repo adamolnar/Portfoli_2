@@ -78,6 +78,17 @@ function resetAudio(player)
 
 
 // ----------------------GAME----------------------
+// Add active class to the current button (highlight it)
+var header = document.getElementById("player-choice-container");
+var btns = header.getElementsByClassName("emoji");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
 // Counting score 
 let playerScore = 0;
 let computerScore = 0; 
@@ -90,7 +101,6 @@ let emojis = ["✂️ ", "📄", "🪨", "🦎", "🖖🏻"];
 let currentEmojiNumber = 0;
 
 let shuffleIntervalID;
-let playAgainEmoji;
 
 let userChoiceContainer = document.querySelector("#player-choice-container");
 let emojiShuffleElement = document.querySelector("#emoji-shuffle");
@@ -102,7 +112,6 @@ userChoiceContainer.addEventListener("click", handlePlayerChoice);
 function handlePlayerChoice(event) {
   if (!event.target.classList.contains("emoji") || moves >= 10) return;  
   userChoice = event.target.textContent;
-  userChoiceContainer.innerHTML = `<p class="emoji">${userChoice}</p>`;
   clearInterval(shuffleIntervalID);
   moves++; 
   document.querySelector('.movesleft').innerText = `Moves Left: ${10 - moves}`;
@@ -122,7 +131,6 @@ nextRound.addEventListener('click', nextRoundBtn);
 // Function to reset user and computer choice and pick choice again
 function nextRoundBtn() {
       shuffleIntervalID = setInterval(shuffleEmojis, 150); 
-      playerEmojis();
 }
 
 function playerEmojis() {
