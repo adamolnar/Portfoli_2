@@ -238,7 +238,7 @@ body {font-size: 15px;}
 #myBtn {margin: 5px 5px; padding-block: 2px;}
 #welcome-to {font-size: 20px; letter-spacing: 0; margin-top: 20%; margin: 80px auto;}
 h1 {font-size: 100%; }
-.emoji {font-size: inherit; margin-top: 0; display: contents;}
+.emoji {font-size: 16px; display: inline-flex; margin: 0%;}
 .choice-container {display: block; }
 .game-container {font-size: 20px;}
 button#next-round {font-size: 20px; padding: 8px;}
