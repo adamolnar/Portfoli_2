@@ -123,8 +123,17 @@
 - I confirm that the colors and fonts chosen are easy to read and are accessible by running it through lighthouse in devtools. 
   <p>&nbsp;</p>
 
+![Screenshot from lighthouse testing](/assets/images/Screenshot_lighthouse.png)
+<p>&nbsp;</p>
+
+
+
 ## Bugs
 ### Solved Bugs
+- When I deployed my project to GitHub Pages i discovered my game was broken, the link to the other files (CSS, JS, images etc.) did not work. I discovered this was beacuse I had absolute file paths such as this in my code. Removing the starting / fixed the problem.
+
+      <link rel="stylesheet" href="css/game.css">
+ 
 - Scissors emoji when chosen by user wasn't showing score and result message.
 
 <!--Options available to player to play game -->
