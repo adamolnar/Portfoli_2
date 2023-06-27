@@ -112,6 +112,7 @@ function handlePlayerChoice(event) {
       } else {
             shuffleEmojis();           
 }
+determineWinner();
 }
 
 // Function to generate computer and user choice
