@@ -12,7 +12,17 @@
 > “In my experience, there’s no such thing as luck.” —Obi-Wan Kenobi, A New Hope
 <p>&nbsp;</p>
 
+![Screenshot of media resposivnes](/assets/images/Screenshot_am_i_responsive.png)
+<p>&nbsp;</p>
+
 # Features
+## Favicon
+- User can identify game tab by visual galaxy element.
+<p>&nbsp;</p>
+
+![Favicon](/assets/images/favicon%20(1).png)
+<p>&nbsp;</p>
+
 ## Intro
 - Opening
   - Star Wars inspired opening with game plot explaining story to the user of Galaxy being in jeopardy by evil forces. In order to save the planet Gnies and free the innocent, user must win the Rock, Paper, Scissors, Lizard, Spock game! User has 10 moves after which winner will be determined.
@@ -41,7 +51,7 @@
   - In the left-top corner this icon, by clicking on it,  allows user to go back to the previus Intro page.
 
 - Player 
-  - This container shows to user all emojis available. By clicking on one of the emoji, user emoji stays and other emojis disappear. 
+  - This container shows to user all emojis available. By clicking on one of the emoji, user emoji is highligted. 
 
 - Computer
   - This container schuffle 5 emojis till the user click on his choice. Once on of the user emoji is picked the schuffle stops and it shows random computer choice. 
@@ -64,7 +74,7 @@
 - Moves Left
   - In this area user can see how many moves is left till end of the game.
 
-![Screenshot of the game after pick](/assets/images/Screenshot_game_area_after_pick.png)
+![Screenshot of the game after pick](/assets/images/Screenshot_hoover_over.png)
 <p>&nbsp;</p>
 
 - Game Rules
