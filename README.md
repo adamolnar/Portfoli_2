@@ -158,6 +158,34 @@
             </div>
         </div>
 
+- After clicking more than once on 'Next round' button, setInterval emoji shuffle was speeding up and wasn't stoping after clicking on user emoji choice. 
+
+    // Function to reset user and computer choice and pick choice again
+    function nextRoundBtn() {
+      shuffleIntervalID = setInterval(shuffleEmojis, 150);    
+    }  
+
+- I had to clear Interval before starting new one in 
+
+    // Function to reset user and computer choice and pick choice again
+    function nextRoundBtn() {
+      clearInterval(shuffleIntervalID);
+      shuffleIntervalID = setInterval(shuffleEmojis, 150);    
+    }  
+  
+- After inspecting game.html, error message was showing: 
+
+![Screenshot of the error ](/assets/images/Screenshot_error.png)
+<p>&nbsp;</p>
+
+- First I was trying to replace the funcion handlePlayerChoice(event) with onlick event directly attached to divs with emoji, but eventually found simpler sollution of just removing handlePlayerChoice(); function from the bottom of JS file.
+
+      // Shuffle emojis 
+      shuffleIntervalID = setInterval(shuffleEmojis, 150);
+    ~~handlePlayerChoice();~~
+
+
+
         
 
 

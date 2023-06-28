@@ -268,9 +268,8 @@ function gameOver() {
       }
 }
 
-// Function to shuffle emojis in the game and to show full emoji choice to the user
+// Shuffle emojis 
     shuffleIntervalID = setInterval(shuffleEmojis, 150);
-    handlePlayerChoice();
 
 
 //------------------------GAME OVER---------------------------------
