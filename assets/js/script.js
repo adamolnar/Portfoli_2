@@ -130,6 +130,7 @@ nextRound.addEventListener('click', nextRoundBtn);
 
 // Function to reset user and computer choice and pick choice again
 function nextRoundBtn() {
+      clearInterval(shuffleIntervalID);
       shuffleIntervalID = setInterval(shuffleEmojis, 150); 
 }
 
