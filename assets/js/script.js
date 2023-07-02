@@ -23,6 +23,8 @@ function getRandomPosition() {
 }
 
 
+
+
 // ----------------------GAME----------------------
 // Add active class to the current button (highlight it)
 var header = document.getElementById("player-choice-container");

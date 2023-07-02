@@ -117,13 +117,13 @@
 - I confirmed that audio controle buttons are working if user whants to play, stop, start from beginning or if sound goes volume up or down.
 - I confirmed that the game results are always correct.
 - I confirmed that score is updating correctly.
-- I confirmed that after 10 moves game is over and user either wins or lose.
+- I confirmed that after 10 moves game is over and user either wins or lose (if user and computer have even score, user is still winning as it would require another html page for "It's a tie!" result.).
 - I confirmed that Intro, instructions, options, results and modal box text are all readable and easy to understand.
 - I confirm that this project is responsive, looks good and works on all standart screen sizes using the devtools device toolbar.
 - I confirm that the colors and fonts chosen are easy to read and are accessible by running it through lighthouse in devtools. 
   <p>&nbsp;</p>
 
-![Screenshot from lighthouse testing](/assets/images/Screenshot_lighthouse.png)
+![Screenshot from lighthouse testing](/assets/images/Screenshot_lighthouse%20(1).png)
 <p>&nbsp;</p>
 
 
@@ -180,11 +180,9 @@
 
 -After inspecting each html: index.html, win.html and lose.html page, same error message was shoving in Dev Tools:
 
-![Screenshot from lighthouse testing](/assets/images/Screenshot_error_index.png)
+    script.js:64 Uncaught TypeError: Cannot read properties of null (reading 'getElementsByClassName')
 
-- I had to remove JS code for all this pages from script.js file, and paste it directly to html structure to avoid setting properies of null error. 
-
-
+- I had to remove JS code for all this pages from script.js file, and paste it directly to html structure to avoid setting properies of null error as it was containg functions which could not be run as the were not assigned to those pages. 
 
 <p>&nbsp;</p>  
 
