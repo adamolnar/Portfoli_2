@@ -74,7 +74,56 @@
     </div>
     
     <!-- Java Script -->
-    <script src="assets/js/script.js"></script>
+    <script>
+    //--------------------BACKGROUND STARS---------------------
+// Sets the number of stars  to display
+const numStars = 200;
+
+// For every star to display
+for (let i = 0; i < numStars; i++) {
+  let star = document.createElement("div");  
+  star.className = "star";
+  let xy = getRandomPosition();
+    star.style.top = xy[0] + 'px';
+    star.style.left = xy[1] + 'px';
+  document.body.append(star);
+}
+
+
+// Gets random x, y values based on the size of the container
+function getRandomPosition() {  
+  let y = window.innerWidth;
+  let x = window.innerHeight;
+    let randomX = Math.floor(Math.random()*x);
+    let randomY = Math.floor(Math.random()*y);
+    return [randomX,randomY];
+}
+
+//----------------------------AUDIO-------------------------
+// Function to click on icon to play audio
+function playAudio(player)
+{
+   document.getElementById(player).play();
+   document.getElementById("pausebutton_" + player).style.display = "";
+   document.getElementById("playbutton_" + player).style.display = "none";
+   document.getElementById("resetbutton_" + player).style.display = "";
+   document.getElementById("down-volume").style.display = "";
+   document.getElementById("up-volume").style.display = "";
+}
+function pauseAudio(player)
+{
+   document.getElementById(player).pause();
+   document.getElementById("playbutton_" + player).style.display = "";
+   document.getElementById("pausebutton_" + player).style.display = "none";
+   document.getElementById("resetbutton_" + player).style.display = "none";
+   document.getElementById("down-volume").style.display = "none";
+   document.getElementById("up-volume").style.display = "none";
+}
+function resetAudio(player)
+{
+   document.getElementById(player).currentTime = 0;
+}
+</script>
 
     <!-- Font awesome and google fonts  -->
     <script src="https://kit.fontawesome.com/84c12be1a5.js" crossorigin="anonymous"></script>

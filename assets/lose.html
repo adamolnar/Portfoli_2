@@ -26,7 +26,39 @@
     <button onclick="playAgain()">Play Again</button>
     
     <!-- Java Scipt -->
-    <script src="../assets/js/script.js"></script>
+    <script>
+
+    //--------------------BACKGROUND STARS---------------------
+// Sets the number of stars  to display
+const numStars = 200;
+
+// For every star to display
+for (let i = 0; i < numStars; i++) {
+  let star = document.createElement("div");  
+  star.className = "star";
+  let xy = getRandomPosition();
+    star.style.top = xy[0] + 'px';
+    star.style.left = xy[1] + 'px';
+  document.body.append(star);
+}
+
+
+// Gets random x, y values based on the size of the container
+function getRandomPosition() {  
+  let y = window.innerWidth;
+  let x = window.innerHeight;
+    let randomX = Math.floor(Math.random()*x);
+    let randomY = Math.floor(Math.random()*y);
+    return [randomX,randomY];
+}
+
+//------------------------GAME OVER---------------------------------
+// Function to play again game and redirect it to game.html
+function playAgain () {
+      window.location.href = "game.html"; 
+};   
+
+    </script>
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Ubuntu&display=swap" rel="stylesheet">

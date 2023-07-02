@@ -22,60 +22,6 @@ function getRandomPosition() {
     return [randomX,randomY];
 }
 
-     
-//---------------------MODAL BOX-------------------------
-// Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-//----------------------------AUDIO-------------------------
-// Function to click on icon to play audio
-function playAudio(player)
-{
-   document.getElementById(player).play();
-   document.getElementById("pausebutton_" + player).style.display = "";
-   document.getElementById("playbutton_" + player).style.display = "none";
-   document.getElementById("resetbutton_" + player).style.display = "";
-   document.getElementById("down-volume").style.display = "";
-   document.getElementById("up-volume").style.display = "";
-}
-function pauseAudio(player)
-{
-   document.getElementById(player).pause();
-   document.getElementById("playbutton_" + player).style.display = "";
-   document.getElementById("pausebutton_" + player).style.display = "none";
-   document.getElementById("resetbutton_" + player).style.display = "none";
-   document.getElementById("down-volume").style.display = "none";
-   document.getElementById("up-volume").style.display = "none";
-}
-function resetAudio(player)
-{
-   document.getElementById(player).currentTime = 0;
-}
-
 
 // ----------------------GAME----------------------
 // Add active class to the current button (highlight it)
@@ -260,7 +206,7 @@ function handlePlayerChoice(event) {
 
 // Function to end the game and determine final winner.
 function gameOver() {
-      if (playerScore > computerScore) {
+      if (playerScore >= computerScore) {
             window.location.href = "win.html";  
       } else {
             window.location.href = "lose.html"; 
@@ -271,8 +217,29 @@ function gameOver() {
     shuffleIntervalID = setInterval(shuffleEmojis, 150);
 
 
-//------------------------GAME OVER---------------------------------
-// Function to play again game and redirect it to game.html
-function playAgain () {
-      window.location.href = "game.html"; 
-};      
+//---------------------MODAL BOX-------------------------
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

@@ -133,6 +133,7 @@
 - When I deployed my project to GitHub Pages i discovered my game was broken, the link to the other files (CSS, JS, images etc.) did not work. I discovered this was beacuse I had absolute file paths such as this in my code. Removing the starting / fixed the problem.
 
       <link rel="stylesheet" href="css/game.css">
+<p>&nbsp;</p>
  
 - Scissors emoji when chosen by user wasn't showing score and result message.
 
@@ -157,6 +158,7 @@
                 <p class="emoji">🖖🏻</p>
             </div>
         </div>
+<p>&nbsp;</p>
 
 - After clicking more than once on 'Next round' button, setInterval emoji shuffle was speeding up and wasn't stoping after clicking on user emoji choice. 
 
@@ -174,12 +176,23 @@
       clearInterval(shuffleIntervalID);
       shuffleIntervalID = setInterval(shuffleEmojis, 150);    
     }  
-  
-- After inspecting game.html, error message was showing: 
+<p>&nbsp;</p>
+
+-After inspecting each html: index.html, win.html and lose.html page, same error message was shoving in Dev Tools:
+
+![Screenshot from lighthouse testing](/assets/images/Screenshot_error_index.png)
+
+- I had to remove JS code for all this pages from script.js file, and paste it directly to html structure to avoid setting properies of null error. 
+
+
+
+<p>&nbsp;</p>  
+
+- After inspecting game.html, error message was showing and scoring was adding double: 
 
 ![Screenshot of the error ](/assets/images/Screenshot_error.png)
 
-- First I was trying to replace the funcion handlePlayerChoice(event) with onlick event directly attached to divs with emoji class, but eventually found simpler sollution of just removing handlePlayerChoice(); function from the bottom of JS file.
+- First I was trying to replace the funcion handlePlayerChoice(event) with onlick event directly attached to div with emoji class, but eventually found simpler sollution of just removing handlePlayerChoice(); function from the bottom of JS file and changed hierarchy of JS file by moving handlePlayerChoice function below determinWinner function so it could be define before it is called. Also remover determineWinner function called add the end of handlePlayerChoice as it was causing dubling the points issue.
 
       // Shuffle emojis 
       shuffleIntervalID = setInterval(shuffleEmojis, 150);
