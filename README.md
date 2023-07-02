@@ -108,6 +108,7 @@
   [Explosion animation](https://www.geeksforgeeks.org/explosion-animation-in-canvas/).
   - Confetti animation in win.html not just copied and adjusted to project needs but wriiten by myself [CodePen](https://codepen.io/programking/pen/AJgeEd).
    - Hyperjump and countdwon animation in CSS, between index.html and game.html to create space travel experience for the user [CodePen](https://codepen.io/noahblon/pen/DpNRyR).
+   - Beacuse in case of 'tie' between user and computer, user gets advantage and wins, I would definitely create html page for those situations where "it's a tie" between user and computer.
    <p>&nbsp;</p>
 
 # Testing 
@@ -203,6 +204,15 @@
 - CSS
   - No errors were found when passing through the official (Jigsaw) validator.
 - JS
+ 
+Metrics
+    
+    - There are 10 functions in this file.
+    - Function with the largest signature take 1 arguments, while the median is 0.
+    - Largest function has 71 statements in it, while the median is 3.
+    - The most complex function has a cyclomatic complexity value of 42 while the median is 1.5.
+    - 24 warnings
+    - no errors
 
 ### Unfixed Bugs
   <p>&nbsp;</p>
@@ -225,6 +235,7 @@
 - Play again button was inspired by [TeamTreeHouse](https://teamtreehouse.com/community/any-one-know-how-to-make-a-restart-button). 
 - Audio tag with icon code was inspire by [StackOverflow](https://stackoverflow.com/questions/63740598/how-can-i-use-html-audio-tag-with-icon) and [Tutorial](http://www.nof-tutorials.com/HTML5-Player/Tutorial/tutorial.html).
 - Confetti for the win.html was copied from [CodePen](https://codepen.io/programking/pen/AJgeEd).
+- The README.md file is based on [Code Instytute Portfolio 2](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/) sample.
 
 
 
