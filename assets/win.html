@@ -11,10 +11,10 @@
     <title>Game</title>
 
     <!-- Link for the website favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon (1).png" style="border-radius:50%;">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon(1).png" style="border-radius:50%;">
 
     <!-- Link to animate.css website -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 
 <body>
@@ -29,9 +29,8 @@
     <button onclick="playAgain()">Play Again</button>
     
     <!-- Java Scipt -->
-    <script>
-
-        //--------------------BACKGROUND STARS---------------------
+<script>
+//--------------------BACKGROUND STARS---------------------
 // Sets the number of stars  to display
 const numStars = 200;
 
@@ -44,7 +43,6 @@ for (let i = 0; i < numStars; i++) {
     star.style.left = xy[1] + 'px';
   document.body.append(star);
 }
-
 
 // Gets random x, y values based on the size of the container
 function getRandomPosition() {  
@@ -61,10 +59,7 @@ function playAgain () {
       window.location.href = "game.html"; 
 };   
 
-
-    
-
-    </script>
+</script>
     <script src="../assets/js/confetti.js"></script>
 
     <!-- Google fonts -->

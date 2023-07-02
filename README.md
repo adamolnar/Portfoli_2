@@ -112,12 +112,12 @@
 
 # Testing 
 - I tested playing this game in different browsers: Chrome, Firefox, Safari.
-- I confirmed that fast vorward icon, to skip the intro content, work and also go back arrows in game.html take user back to index.html page.
-- I confirmed that START button, after Intro with instructions is over, takes user to the game.html. 
-- I confirmed that audio controle buttons are working if user whants to play, stop, start from beginning or if sound goes volume up or down.
+- I confirmed that fast vorward icon, to skip the intro content in index.html, works and also go back arrows in game.html take user back to index.html page.
+- I confirmed that START button in index.html, after Intro with instructions is over, takes user to the game.html. 
+- I confirmed that audio controle buttons in index.html are working if user wants to play, stop, or start from the beginning or if sound goes volume up or down.
 - I confirmed that the game results are always correct.
 - I confirmed that score is updating correctly.
-- I confirmed that after 10 moves game is over and user either wins or lose (if user and computer have even score, user is still winning as it would require another html page for "It's a tie!" result.).
+- I confirmed that after 10 moves game is over and user either wins or lose (if user and computer have == score, user is still winning as it would require another html page for "It's a tie!" result.).
 - I confirmed that Intro, instructions, options, results and modal box text are all readable and easy to understand.
 - I confirm that this project is responsive, looks good and works on all standart screen sizes using the devtools device toolbar.
 - I confirm that the colors and fonts chosen are easy to read and are accessible by running it through lighthouse in devtools. 

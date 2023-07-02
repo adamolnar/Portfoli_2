@@ -68,14 +68,12 @@
      
     <!-- Start game button with animation -->
     <div id="bt">
-        <button class = "button">
-            <a href="./assets/game.html" aria-label="Start the game">Start</a> 
-        </button>
+        <a href="./assets/game.html" aria-label="Start the game" class = "button">Start</a> 
     </div>
     
     <!-- Java Script -->
-    <script>
-    //--------------------BACKGROUND STARS---------------------
+<script>
+//--------------------BACKGROUND STARS---------------------
 // Sets the number of stars  to display
 const numStars = 200;
 
@@ -89,7 +87,6 @@ for (let i = 0; i < numStars; i++) {
   document.body.append(star);
 }
 
-
 // Gets random x, y values based on the size of the container
 function getRandomPosition() {  
   let y = window.innerWidth;
@@ -98,9 +95,6 @@ function getRandomPosition() {
     let randomY = Math.floor(Math.random()*y);
     return [randomX,randomY];
 }
-
-     
-
 
 //----------------------------AUDIO-------------------------
 // Function to click on icon to play audio
@@ -126,10 +120,7 @@ function resetAudio(player)
 {
    document.getElementById(player).currentTime = 0;
 }
-
-    
-
-    </script>
+</script>
 
     <!-- Font awesome and google fonts  -->
     <script src="https://kit.fontawesome.com/84c12be1a5.js" crossorigin="anonymous"></script>
