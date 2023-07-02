@@ -106,24 +106,6 @@ let userChoiceContainer = document.querySelector("#player-choice-container");
 let emojiShuffleElement = document.querySelector("#emoji-shuffle");
 
 
-userChoiceContainer.addEventListener("click", handlePlayerChoice);
-
-// Function to get player choice
-function handlePlayerChoice(event) {
-  if (!event.target.classList.contains("emoji") || moves >= 10) return;  
-  userChoice = event.target.textContent;
-  clearInterval(shuffleIntervalID);
-  moves++; 
-  document.querySelector('.movesleft').innerText = `Moves Left: ${10 - moves}`;
-      determineWinner();
-      if (moves == 10) {
-            gameOver();
-      } else {
-            shuffleEmojis();           
-}
-determineWinner();
-}
-
 // Function to generate computer and user choice
 let nextRound = document.getElementById('next-round');
 nextRound.addEventListener('click', nextRoundBtn);
@@ -258,6 +240,23 @@ function determineWinner() {
 
     gameResultMessageElement.textContent = gameResultMessage;
 }
+
+// Function to get player choice
+function handlePlayerChoice(event) {
+      if (!event.target.classList.contains("emoji") || moves >= 10) return;  
+      userChoice = event.target.textContent;
+      clearInterval(shuffleIntervalID);
+      moves++; 
+      document.querySelector('.movesleft').innerText = `Moves Left: ${10 - moves}`;
+          determineWinner();
+          if (moves == 10) {
+                gameOver();
+          } else {
+                shuffleEmojis();           
+    }
+    }
+    
+    userChoiceContainer.addEventListener("click", handlePlayerChoice);
 
 // Function to end the game and determine final winner.
 function gameOver() {
