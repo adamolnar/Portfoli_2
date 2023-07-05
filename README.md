@@ -197,6 +197,35 @@
       shuffleIntervalID = setInterval(shuffleEmojis, 150);
     ~~handlePlayerChoice();~~
 
+- After checking pages in HTML validator error was showing incorrect white space in favicon link, which i have removed but it broke the path to image, and tab was not showing favicon in all html pages.
+
+- After final testing i got feedback from my mentor that computer choice shows inccorect message which broke the logic of the game. After further investigation I found why logic was broken and why it wasn't caught after final testing.
+
+// Function to get player choice
+function handlePlayerChoice(event) {
+      if (!event.target.classList.contains("emoji") || moves >= 10) return;  
+      userChoice = event.target.textContent;
+      clearInterval(shuffleIntervalID);
+      moves++; 
+      document.querySelector('.movesleft').innerText = `Moves Left: ${10 - moves}`;
+          determineWinner();
+          if (moves == 10) {
+                gameOver();
+          } else {
+                currentEmojiNumber = 0;         
+    }
+}
+
+- I replaced shuffleEmojis() function with currentEmojiNumber = 0; to have corret output. And bug was not caught after final testing due to my failure to clear cache in browser. 
+
+<!-- Link for the website favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon (1).png" style="border-radius:50%;">
+
+- I had to rename the image and establish new path for it in order to display favicon in browser tab:
+
+<!-- Link for the website favicon-->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" style="border-radius:50%;">
+
 
 ### Validator Testing
 - HTML
