@@ -45,7 +45,7 @@ let moves = 0;
 let userChoice = "";
 let computerChoice = "";
 
-let emojis = ["✂️ ", "📄", "🪨", "🦎", "🖖🏻"];
+let emojis = ["🪨", "📄", "✂️ ", "🦎", "🖖🏻"];
 let currentEmojiNumber = 0;
 
 let shuffleIntervalID;
@@ -53,29 +53,7 @@ let shuffleIntervalID;
 let userChoiceContainer = document.querySelector("#player-choice-container");
 let emojiShuffleElement = document.querySelector("#emoji-shuffle");
 
-
-// Function to generate computer and user choice
-let nextRound = document.getElementById('next-round');
-nextRound.addEventListener('click', nextRoundBtn);
-
-// Function to reset user and computer choice and pick choice again
-function nextRoundBtn() {
-      clearInterval(shuffleIntervalID);
-      shuffleIntervalID = setInterval(shuffleEmojis, 150); 
-}
-
-
-// Function to return a random emoji from the dictionary and  genenerate computer choice.
-function shuffleEmojis() {
-  computerChoice = emojis[currentEmojiNumber];
-  emojiShuffleElement.textContent = computerChoice;
-
-  if (currentEmojiNumber < emojis.length - 1) {
-      currentEmojiNumber++;
-  } else {
-      currentEmojiNumber = 0;
-  }
-}
+userChoiceContainer.addEventListener("click", handlePlayerChoice);
 
 // Function to compare user and computer choices and determin game winner.
 function determineWinner() {
@@ -185,6 +163,18 @@ function determineWinner() {
     gameResultMessageElement.textContent = gameResultMessage;
 }
 
+// Function to return a random emoji from the dictionary and  genenerate computer choice.
+function shuffleEmojis() {
+      computerChoice = emojis[currentEmojiNumber];
+      emojiShuffleElement.textContent = computerChoice;
+    
+      if (currentEmojiNumber < emojis.length - 1) {
+          currentEmojiNumber++;
+      } else {
+          currentEmojiNumber = 0;
+      }
+}
+
 // Function to get player choice
 function handlePlayerChoice(event) {
       if (!event.target.classList.contains("emoji") || moves >= 10) return;  
@@ -196,12 +186,20 @@ function handlePlayerChoice(event) {
           if (moves == 10) {
                 gameOver();
           } else {
-                shuffleEmojis();           
+                currentEmojiNumber = 0;           
     }
-    }
-    
-    userChoiceContainer.addEventListener("click", handlePlayerChoice);
+}
 
+// Function to generate computer and user choice
+let nextRound = document.getElementById('next-round');
+nextRound.addEventListener('click', nextRoundBtn);
+
+// Function to reset user and computer choice and pick choice again
+function nextRoundBtn() {
+      clearInterval(shuffleIntervalID);
+      shuffleIntervalID = setInterval(shuffleEmojis, 150); 
+}
+    
 // Function to end the game and determine final winner.
 function gameOver() {
       if (playerScore >= computerScore) {
@@ -228,16 +226,16 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
   modal.style.display = "block";
-};
+}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
-};
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-};
+}
