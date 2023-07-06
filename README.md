@@ -20,7 +20,7 @@
 - User can identify game tab by visual galaxy element.
 <p>&nbsp;</p>
 
-![Favicon](/assets/images/favicon%20(1).png)
+![Favicon](/assets/images/favicon.png)
 <p>&nbsp;</p>
 
 ## Intro
